@@ -3,14 +3,14 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import '../styles/globals.css';
+import Script from 'next/script';
+import Layout from '../components/layouts/Layouts';
 
-function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      {/* Your app content */}
+    <Layout>
       <Component {...pageProps} />
-    </div>
+    </Layout>
   );
 }
 
-export default MyApp;

@@ -1,16 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
-import MainLayout from '../components/layouts/MainLayouts';
+import Layout from '../components/layouts/Layouts';
 
-const Home: React.FC = () =>{
+export default function Home({ Component, pageProps }) {
   return (
-    <MainLayout>
-     <p>helloword</p>
-    </MainLayout>
+    <Layout>
+      <p>Hello World</p>
+    </Layout>
     
-    
-    
-  )
+  );
 }
 
-export default Home;
+
+
