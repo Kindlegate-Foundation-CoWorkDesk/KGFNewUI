@@ -3,6 +3,7 @@ import Image from "next/image";
 import Header from "../Header";
 import NavBar from "../NavBar";
 import Footer from "../Footer";
+import Skeleton from "../Skeleton";
 
 type LayoutProps = {
     children: ReactNode; // This allows any JSX elements as children
@@ -16,6 +17,7 @@ const Layout: React.FC<LayoutProps> = ( {children} ) => {
     return (
         <>
         <Header links={navigationLinks} />
+        <Skeleton />
         <Footer />
         </>
     )

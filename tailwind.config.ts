@@ -15,9 +15,18 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'skeleton-pattern': "url('/skeleton.svg')",
+      },
+      colors: {
+        'button-blue': 'var(--primary-color)',
+        'button-green': 'var(--secondary-color)'
       },
       
     },
+    
+    borderRadius: {
+      'lg': '2.5rem',
+    }
   },
   plugins: [
     require('flowbite/plugin'),
