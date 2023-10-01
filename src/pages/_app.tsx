@@ -10,6 +10,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <Layout>
       <Component {...pageProps} />
+      <Script src='../node_modules/flowbite/dist/flowbite.min.js' />
     </Layout>
   );
 }

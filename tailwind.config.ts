@@ -16,10 +16,16 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'skeleton-pattern': "url('/skeleton.svg')",
+        'carousel-pattern': "url('/carousel-pattern.svg')",
+      },
+      backgroundPosition: {
+        'right-top-4': 'right -8rem top -1.5rem',
       },
       colors: {
         'button-blue': 'var(--primary-color)',
-        'button-green': 'var(--secondary-color)'
+        'button-green': 'var(--secondary-color)',
+        'carousel-primary': 'var(--carousel-color-primary)',
+        'carousel-secondary': 'var(--carousel-color-secondary)',
       },
       
     },
