@@ -46,7 +46,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
                     
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" 
-                        className="flex items-center justify-between w-full  pl-3 pr-4 text-white rounded hover:bg-gray-50 
+                        className="flex items-center justify-between w-full  pl-3 pr-4 text-white hover:bg-gray-50 
                         lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 dark:text-white md:dark:hover:text-blue-500 
                         dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">GET INVOLVED 
                         <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -58,19 +58,19 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
                         shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                             <ul className=" text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
                                 <li>
-                                    <a href="#" className="block px-4  hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                    <a href="#" className="block px-4  
+                                    hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">AS A SPONSOR</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="block px-4  hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                    <a href="#" className="block px-4  
+                                    hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">AS A MENTOR</a>
                                 </li>
                                 <li>
-                                    <a href="#" className="block px-4  hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                                    <a href="#" className="block px-4  
+                                    hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">AS A VOLUNTEER</a>
                                 </li>
                             </ul>
-                            <div className="py-1">
-                                <a href="#" className="block px-4  text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 
-                                dark:text-gray-400 dark:hover:text-white">Sign out</a>
-                            </div>
+                            
                         </div>
                     </li>
                 </ul>

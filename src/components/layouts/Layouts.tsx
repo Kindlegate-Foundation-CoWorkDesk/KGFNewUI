@@ -17,14 +17,25 @@ const Layout: React.FC<LayoutProps> = ( {children} ) => {
         { text: 'Contact', url: '/contact' },
       ]; 
     return (
-        <>
-        <Header links={navigationLinks} />
+      <div className="bg-gray-100 min-h-screen">
+        
+        <header>
+        <div className="container mx-auto">
+          <Header links={navigationLinks} />
+          </div>
+        </header>
+        <main className="container mx-auto py-8">
         <Skeleton />
         <CarouselSlide />
-        {/* <OurTeam /> */}
+        <OurTeam />
+        </main>
+       
 
-        <Footer />
-        </>
+      
+        <footer className="text-white py-4 container mx-auto">
+            <Footer />
+        </footer>
+        </div>
     )
 }
 

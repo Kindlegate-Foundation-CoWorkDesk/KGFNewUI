@@ -10,8 +10,7 @@ const Skeleton: React.FC = () => {
     <div className="grid grid-rows-2 lg:w-[604px]">
         <div className="flex flex-col mr-12 mb-2.5 ">
             <div className='flex flex-col items-end'>
-                <span className='text-2xl leading-8'>OUR MANDATE</span>
-                <img src="../borderColor.svg" />
+                <p className='underline underline-offset-8 decoration-underline-yellow text-2xl leading-8'>OUR MANDATE</p>
             </div>
             <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                 Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, 
@@ -22,8 +21,7 @@ const Skeleton: React.FC = () => {
         </div>
         <div className="flex flex-col mr-12 mb-2.5 ">
             <div className='flex flex-col items-end'>
-                <span className='text-2xl leading-8'>OBJECTIVES</span>
-                <img src="../borderColor.svg" />
+                <p className='underline underline-offset-8 decoration-underline-yellow text-2xl leading-8'>OBJECTIVES</p>
             </div>
             <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                 Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, 

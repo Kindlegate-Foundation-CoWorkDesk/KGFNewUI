@@ -26,6 +26,8 @@ const config: Config = {
         'button-green': 'var(--secondary-color)',
         'carousel-primary': 'var(--carousel-color-primary)',
         'carousel-secondary': 'var(--carousel-color-secondary)',
+        'OurTeam-green': 'var(--secondary-color)',
+        'underline-yellow': 'var(--underline-yellow)',
       },
       
     },

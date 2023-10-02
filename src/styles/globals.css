@@ -6,6 +6,9 @@
   html {
     font-family: Calibri, system-ui, sans-serif;
   }
+  body {
+    @apply bg-black
+  }
 }
 /* styles.css */
 
@@ -24,6 +27,7 @@
   --secondary-color: #00A859;
   --carousel-color-primary: #00586B;
   --carousel-color-secondary: #4B4B4B;
+  --underline-yellow: #E3B522;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,12 +40,13 @@
 
 /* Define font styles */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  
-  font-size: var(--font-size);
-  font-weight: var(--font-weight);
-}
+  body {
+    color: rgb(var(--foreground-rgb));
+    
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+  }
+
 footer {
  background-color: var(--footer-color);
 }

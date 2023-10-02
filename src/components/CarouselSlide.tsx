@@ -90,9 +90,11 @@ const CarouselSlide: React.FC = () => {
     rounded-lg mt-9 relative w-full '>
 
     <div className='px-24'>
-        <div className='text-4xl text-white pt-7' >
+        <div className='text-4xl text-white py-7' >
             <p>OUR VALUE ADDING ROADMAP</p>
-            <p>(HESS MANDATE)</p>
+            <p className='underline underline-offset-8 decoration-underline-yellow'>(HESS MANDATE)</p>
+            
+            
         </div>
     
     

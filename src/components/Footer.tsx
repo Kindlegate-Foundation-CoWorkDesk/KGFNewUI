@@ -2,15 +2,14 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="text-white py-4">
-      <div className="container mx-auto">
+      <>
         <div className="flex justify-between items-center">
           <div className="grid grid-rows-2">
             <img src='../KGFlogo.svg' />
-            <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                 Maecenas porttitor congue massa. Fusce posuere, 
                 magna sed pulvinar ultricies, 
-            </span>
+            </p>
           </div>
           <div className='grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 '>
             <div>
@@ -26,7 +25,6 @@ const Footer: React.FC = () => {
           
         </div>
 
-      </div>
       <hr className="my-6 border-white-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div className="container mx-auto ">
       <div className="flex items-center sm:justify-center space-x-5 mt-4 sm:mt-0">          
@@ -61,8 +59,8 @@ const Footer: React.FC = () => {
                   <span className="sr-only">Dribbble account</span>
               </a>
       </div>
-    </div>
-    </footer>
+      </div>
+      </>
   );
 };
 
