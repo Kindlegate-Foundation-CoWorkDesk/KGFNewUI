@@ -3,7 +3,7 @@ import React from 'react';
 const Skeleton: React.FC = () => {
   return (
     
-<div className="rounded-lg bg-[#F1F1F1] lg:py-8">
+<div className="rounded-[20px] bg-[#F1F1F1] lg:py-8">
 <div className='bg-skeleton-pattern bg-no-repeat bg-contain'>
 <div className='container mx-auto '>
 <div className="flex justify-end items-center">

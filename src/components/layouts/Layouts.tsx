@@ -5,6 +5,8 @@ import NavBar from "../NavBar";
 import Footer from "../Footer";
 import Skeleton from "../Skeleton";
 import CarouselSlide from "../CarouselSlide";
+import CarouselSlide2 from "../CarouselSlide2";
+import CarouselSlide3 from "../CarouselSlide3";
 import OurTeam from "../OurTeam";
 
 type LayoutProps = {
@@ -26,13 +28,15 @@ const Layout: React.FC<LayoutProps> = ( {children} ) => {
         </header>
         <main className="container mx-auto py-8">
         <Skeleton />
-        <CarouselSlide />
+        {/* <CarouselSlide />
+        <CarouselSlide2 /> */}
+        <CarouselSlide3 />
         <OurTeam />
         </main>
        
 
       
-        <footer className="text-white py-4 container mx-auto">
+        <footer className="text-white container mx-auto">
             <Footer />
         </footer>
         </div>
