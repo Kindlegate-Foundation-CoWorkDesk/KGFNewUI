@@ -184,7 +184,7 @@ const Footer: React.FC = () => {
 
       <hr className="  sm:mx-auto dark:border-gray-700 " />
       <div className="container mx-auto ">
-      <div className="flex flex-row justify-center gap-8 items-center">          
+      <div className="border-t pt-4 flex flex-row justify-center gap-8 items-center">          
               <a href="#" className="hover:text-gray-900 dark:hover:text-white">
               
                   <span className="sr-only">Facebook page</span>
