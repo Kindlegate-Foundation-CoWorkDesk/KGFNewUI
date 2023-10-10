@@ -114,7 +114,7 @@ const Footer: React.FC = () => {
       </div> */}
 
       
-      <div className="flex flex-col  w-full h-[496px] ">
+      {/* <div className="flex flex-col  w-full h-[496px] ">
         <div className=' flex flex-row gap-20 items-center mb-5 ml-24 mr-64'>
         
           <div className='self-start flex flex-col gap-3 items-start'>
@@ -160,26 +160,6 @@ const Footer: React.FC = () => {
         
       
 
-      {/* line */}
-      {/* social community */}
-        {/* <div className="grid grid-rows-2">
-          <img src='../KGFlogo.svg' />
-          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-              Maecenas porttitor congue massa. Fusce posuere, 
-              magna sed pulvinar ultricies, 
-          </p>
-        </div>
-        <div className='grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 '>
-          <div>
-              <h2>Reach Us</h2>
-              <ul>
-                  <li>About Us</li>
-                  <li>Contact Us</li>
-              </ul>
-          </div>
-          <div><h2>Program</h2></div>
-          <div><h2>Resource</h2></div>
-        </div> */}
         
 
       <hr className="  sm:mx-auto dark:border-gray-700 " />
@@ -215,7 +195,113 @@ const Footer: React.FC = () => {
               </a>
               
       </div>  
-      </div></div>
+      </div>
+      
+      </div> */}
+
+<div
+    id="FOOTER"
+    className="overflow-hidden bg-[#1086a0] flex flex-col gap-8 h-[496px] shrink-0 mx-0 py-4"
+  >
+    <div className="flex flex-row gap-20 items-center mb-5 ml-24 mr-64">
+      <div className="self-start flex flex-col gap-3 items-start">
+        <img
+          src="https://file.rendit.io/n/G76gGj6jrViojYqDSjhE.png"
+          id="Logo2"
+          className=""
+        />
+        <div className="text-lg font-['Open_Sans'] leading-[32px] text-[#f1f1f1] ml-1 w-full">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
+          porttitor congue massa. Fusce posuere, magna sed pulvinar
+          ultricies,{" "}
+        </div>
+      </div>
+      <div className="relative flex flex-col mr-5 pb-16 w-40 shrink-0 items-start">
+        <div
+          id="AboutUsContactUs1"
+          className="text-xl font-['Calibri'] leading-[16.5px] text-white absolute top-5 left-0 h-20 w-full"
+        >
+          About Us
+          <br />
+          <br />
+          Contact Us
+          <br />
+          <div id="AboutUsContactUs" className="text-[#777777] contents">
+            <br />
+          </div>
+        </div>
+        <div className="text-xl font-['Abhaya_Libre'] font-bold leading-[32px] text-white relative w-full">
+          Reach Us
+        </div>
+      </div>
+      <div className="relative flex flex-col mr-5 pb-16 w-40 shrink-0 items-start">
+        <div className="text-xl font-['Calibri'] leading-[16.5px] text-white absolute top-5 left-0 h-20 w-full">
+          Arts
+          <br />
+          <br />
+          SDGs
+          <br />
+          <br />
+          Entrepreneurship
+        </div>
+        <div className="text-xl font-['Abhaya_Libre'] font-bold leading-[32px] text-white relative w-full">
+          Programs
+        </div>
+      </div>
+      <div className="relative flex flex-col pb-16 w-40 shrink-0 items-start">
+        <div className="text-xl font-['Calibri'] leading-[16.5px] text-white absolute top-5 left-0 h-20 w-full">
+          Blog
+          <br />
+          <div className="w-40 h-32 relative flex flex-col items-start">
+            <div className="text-xl font-['Calibri'] leading-[16.5px] text-[#777777] contents absolute top-0 left-0 h-full w-full">
+              <br />
+            </div>
+            <div className="text-xl font-['Calibri'] leading-[16.5px] text-white contents relative w-full h-full">
+              Privacy Policy
+              <br />
+            </div>
+          </div>
+          <div className="w-40 h-32 relative flex flex-col items-start">
+            <div className="text-xl font-['Calibri'] leading-[16.5px] text-[#777777] contents absolute top-0 left-0 h-full w-full">
+              <br />
+            </div>
+            <div className="text-xl font-['Calibri'] leading-[16.5px] text-white contents relative w-full h-full">
+              News
+            </div>
+          </div>
+        </div>
+        <div className="text-xl font-['Abhaya_Libre'] font-bold leading-[32px] text-white relative w-full">
+          Resources
+        </div>
+      </div>
+    </div>
+    <div
+      id="Line3"
+      className="border-solid border-white mr-1 h-px shrink-0 border-t border-b-0 border-x-0"
+    />
+    <div className="self-center flex flex-row justify-between gap-8 items-start">
+      <img
+        src="https://file.rendit.io/n/1ROVdiAIm7XuC4Dm4szm.svg"
+        id="Icbaselinefacebook"
+        className="w-10 shrink-0"
+      />
+      <img
+        src="https://file.rendit.io/n/k6aOe0hbvjiqZYwLq06i.svg"
+        id="Mdiinstagram"
+        className="w-12 shrink-0"
+      />
+      <img
+        src="https://file.rendit.io/n/4sYkvmtwIFFWlNwPtjqF.svg"
+        id="Mditwitter"
+        className="w-10 shrink-0"
+      />
+      <img
+        src="https://file.rendit.io/n/XYOHQE6kAdbBmcyvFUXZ.svg"
+        id="Biyoutube"
+        className="mt-px w-10 shrink-0"
+      />
+    </div>
+  </div>
       </>
   );
 };

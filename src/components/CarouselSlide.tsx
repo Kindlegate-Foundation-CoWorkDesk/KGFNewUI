@@ -101,7 +101,7 @@ const CarouselSlide: React.FC = () => {
     
         <div id="controls-carousel" className="px-6" data-carousel="static">
             {/* <!-- Carousel wrapper --> */}
-            <div className="relative overflow-hidden  md:h-96">
+            <div className="relative overflow-hidden md:h-96">
                 <div className='container mx-auto'>
                 {/* <!-- Item 1 --> */}
                 <div id="carousel-item-1" className="hidden duration-700 ease-in-out 

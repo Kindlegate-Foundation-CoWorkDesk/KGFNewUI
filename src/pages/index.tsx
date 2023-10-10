@@ -1,13 +1,19 @@
 import React from 'react';
-import Image from 'next/image';
-import Layout from '../components/layouts/Layouts';
+import Skeleton from '../components/Skeleton';
+import OurTeam from '../components/OurTeam';
+import CarouselSlide3 from '../components/CarouselSlide3';
+import CarouselSlide2 from '../components/CarouselSlide2';
 
 export default function Home({ Component, pageProps }) {
   return (
-    <Layout>
-      <p>Hello World</p>
-    </Layout>
-    
+    <>
+      
+    <Skeleton />    
+    <CarouselSlide3 />
+    {/* Our Team */}
+    <OurTeam />
+  
+  </>
   );
 }
 
