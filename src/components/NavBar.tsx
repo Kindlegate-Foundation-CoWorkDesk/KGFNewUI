@@ -156,8 +156,15 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 
 <nav className="bg-[linear-gradient(180deg,_rgba(227,_181,_34,_0.25)_0%,rgba(0,_0,_0,_0)_14%)] 
         bg-cover bg-50%_50% bg-blend-normal bg-repeat 
-        flex  items-start pt-6 lg:px-5
+        sm:flex sm:items-start sm:pt-6 lg:px-5
         justify-between ">
+
+{/* <nav className="bg-gradient-to-b from-yellow-200 to-transparent bg-cover bg-center bg-no-repeat bg-50% 
+sm:flex sm:items-start sm:pt-6 lg:px-5 justify-between">
+  <!-- Your navigation menu content here -->
+</nav> */}
+
+
         <a href="#" className="flex items-center">
           <Image src="../KGFlogo.svg" width={79} height={84} alt="KindleGateFoundation Logo" />
         </a>
@@ -233,7 +240,6 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
             text-white mt-5 ">
             <button className='flex items-center' onClick={() => setDropdownOpen(!isDropdownOpen)}>GET INVOLVED 
             <svg className={`w-2.5 h-2.5 ml-2.5 ${isDropdownOpen ? 'rotate-180' : ''}`}
-              // className={`w-2.5 h-2.5 ml-2.5 ${isDropdownOpen ? 'rotate-180' : ''}`}
 
             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
