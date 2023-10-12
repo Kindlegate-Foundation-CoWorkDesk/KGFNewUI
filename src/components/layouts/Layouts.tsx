@@ -21,6 +21,7 @@ const Layout: React.FC<LayoutProps> = ( {children} ) => {
         { id: 4, text: 'OUR TRIBE', url: '/OurTribe' },
         { id: 5, text: 'NEWS', url: '/News' },
         { id: 6, text: 'BLOG', url: '/Blog' },
+        { id: 7, text: 'CONTACT US', url: '/ContactUs' },
       ]; 
     return (
       // <div className="bg-gray-100 min-h-screen">

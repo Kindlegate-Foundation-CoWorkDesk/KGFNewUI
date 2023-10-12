@@ -3,29 +3,44 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Hero from './Hero';
 import Link from 'next/link';
-
+import { useState } from 'react';
 interface NavBarProps {
   links: {id: string; text: string; url: string }[];
 }
 
 const NavBar: React.FC<NavBarProps> = ({ links }) => {
 
-  
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleNavigation = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const closeNavigation = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <>
  
     {/* <header> */}
     {/* <nav className="bg-transparent border-b px-2 lg:px-4 py-1 dark:bg-gray-800">
-        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <div className="flex flex-wrap justify-between items-center 
+              mx-auto max-w-screen-xl">
             <a href="#" className="flex items-center">
                 <Image src="../KGFlogo.svg" width={79} height={84} alt="KindleGateFoundation Logo" />
             </a>
             <div className="flex items-center lg:order-2">
-                <button type="button" className="text-white bg-button-green py-1 px-7 gap-2.5 rounded-lg">DONATE</button>
+                <button type="button" 
+                className="text-white bg-button-green py-1 px-7 
+                gap-2.5 rounded-lg">DONATE</button>
             </div>
-            <div className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <div className="hidden justify-between items-center
+            w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                <ul className="flex flex-col 
+                mt-4 font-medium 
+                lg:flex-row lg:space-x-8 lg:mt-0">
                     <li>
                         <a href="#" className="block  pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 dark:text-white" aria-current="page">HOME</a>
                     </li>
@@ -90,42 +105,24 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
     {/* </header> */}
 
     
-        <div className="bg-[linear-gradient(180deg,_rgba(227,_181,_34,_0.25)_0%,rgba(0,_0,_0,_0)_14%)] 
+        {/* <div className="bg-[linear-gradient(180deg,_rgba(227,_181,_34,_0.25)_0%,rgba(0,_0,_0,_0)_14%)] 
         bg-cover bg-50%_50% bg-blend-normal bg-repeat 
-        flex flex-row items-start pt-6 px-5">
-          <img
-            src="https://file.rendit.io/n/BtD3T75ciOcAEFpbd0Ws.png"
-            id="Logo1"
-            className="mr-16 w-20 shrink-0"
-          />
+        flex flex-wrap items-start pt-6 px-5
+        justify-between">
+          <a href="#" className="flex items-center">
+            <Image src="../KGFlogo.svg" width={79} height={84} alt="KindleGateFoundation Logo" />
+          </a>
+          <div className='hidden justify-between items-center w-full lg:flex lg:mt-0' id="mobile-menu-2">
+            <ul className='flex flex-col lg:flex-row'></ul>
+          </div>
           {links.map((link) => (
               
-              <div key={link.id} className="font-['Calibri'] font-bold leading-[28px] text-white mt-5 mr-16">
+              <div key={link.id} 
+              className="font-['Calibri'] font-bold leading-[28px] 
+              text-white mt-5 mr-16">
               <Link key={link.id} href={link.url}> {link.text}</Link>
-              {/* <Link href={`/blog/${encodeURIComponent(link.url)}`}>
-                {link.text}
-              </Link> */}
             </div>
           ))}
-          {/* <div className="font-['Calibri'] font-bold leading-[28px] text-white mt-5 mr-16">
-            HOME
-          </div>
-          <div className="font-['Calibri'] font-bold leading-[28px] text-white mt-5 mr-16">
-            <Link href="/OurMandate"> OUR MANDATE</Link>
-           
-          </div>
-          <div className="font-['Calibri'] font-bold leading-[28px] text-white mt-5 mr-12">
-            PROGRAMS
-          </div>
-          <div className="font-['Calibri'] font-bold leading-[28px] text-white mt-5 mr-8">
-            OUR TRIBE
-          </div>
-          <div className="font-['Calibri'] font-bold leading-[28px] text-white mt-5 mr-16">
-            NEWS
-          </div>
-          <div className="font-['Calibri'] font-bold leading-[28px] text-white mt-6">
-            BLOG
-          </div> */}
           <div className="flex flex-col justify-between gap-32 items-start mt-6 mb-32">
             <div className="self-end flex flex-row gap-6 w-[440px] items-start">
               <div className="font-['Calibri'] font-bold leading-[28px] text-white mr-6">
@@ -135,11 +132,13 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
                 GET INVOLVED
               </div>
               
+
               <img
                 src="https://file.rendit.io/n/m4eEgPuWV1ZxjWDC3ka8.svg"
                 id="Polygon"
                 className="w-3 shrink-0 mt-3 mr-10"
               />
+              
 
               <button
                 id="Button1"
@@ -153,73 +152,122 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
                         
 
           </div>
+  </div> */}
+
+<nav className="bg-[linear-gradient(180deg,_rgba(227,_181,_34,_0.25)_0%,rgba(0,_0,_0,_0)_14%)] 
+        bg-cover bg-50%_50% bg-blend-normal bg-repeat 
+        flex  items-start pt-6 lg:px-5
+        justify-between ">
+        <a href="#" className="flex items-center">
+          <Image src="../KGFlogo.svg" width={79} height={84} alt="KindleGateFoundation Logo" />
+        </a>
           
-        
+        <div className="flex justify-between lg:order-2
+          lg:gap-32 items-start mt-6 mb-32 ">
+            
+            <button
+              id="Button1"
+              className="border-solid border-white bg-[#00a859] 
+              flex flex-col items-center 
+              px-6 py-1 border rounded-[31px]"
+            >
+              <div className="font-['Calibri'] font-bold leading-[28px] text-white">
+                DONATE
+              </div>
+            </button> 
+            {/* button donate order-2 */}
 
-     
+            {/* toggle button */}
+                        
+            {!isMenuOpen && (
+              
 
-    {/* <div className="overflow-hidden bg-white flex flex-col mr-32 gap-20 h-[767px] shrink-0 items-center px-24 py-8">
-      <div className="text-center text-4xl font-['Calibri'] font-bold leading-[72px] text-[#14242c] w-3/4">
-        Featured Programs
-      </div>
-      <div className="self-stretch flex flex-col ml-3 gap-2">
-        <div className="flex flex-row justify-between mb-6 items-start">
-          <img
-            src="https://file.rendit.io/n/ZIx6gw4skZ1jksZbz1y4.png"
-            className=""
-          />
-          <img
-            src="https://file.rendit.io/n/XGewv1ySQMXB2japrpB9.png"
-            className=""
-          />
-          <img
-            src="https://file.rendit.io/n/SJBYudhXg3vgLo02ZzTA.png"
-            id="Pexelsstevejohnson"
-            className=""
-          />
+              <button  onClick={toggleNavigation} type="button" 
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
+              <span className="sr-only">Open main menu</span>
+              <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+              </button>
+
+            )}
         </div>
-        <div className="flex flex-row gap-64 items-start mb-8 mr-[323px]">
-          <div className="text-center text-2xl font-['Calibri'] font-bold leading-[28px] text-[#0a2640] mb-2 mr-12">
-            Leadership
-          </div>
-          <div className="text-center text-2xl font-['Calibri'] font-bold leading-[28px] text-[#0a2640] mt-2">
-            Entrpreneurship
-          </div>
-          <div className="text-center text-2xl font-['Calibri'] font-bold leading-[28px] text-[#0a2640] mt-1">
-            Arts
-          </div>
-        </div>
-        <div className="flex flex-row mr-32 gap-10 items-start">
-          <div className="text-xl font-['Calibri'] leading-[22.5px] w-1/3 mb-1 mr-6">
-            Promoting thought based Leadership in the Community
-          </div>
-          <div className="text-xl font-['Calibri'] leading-[22.5px] mt-1">
-            Engage in entrepreneurial activities and learn
-            <br />
-            the necessary skills to make it
-          </div>
-          <div className="text-justify text-xl font-['Calibri'] leading-[22.5px] mt-px">
-            We engage the community in
-            <br />
-            recreational activities....
-          </div>
-        </div>
-        <div className="flex flex-row justify-between mr-64 items-start">
-          <div className="text-2xl font-['Calibri'] underline leading-[32px] text-[#00a859] mb-1">
-            Read more
-          </div>
-          <div className="text-2xl font-['Calibri'] underline leading-[32px] text-[#00a859] mt-1">
-            Read more
-          </div>
-          <div className="text-2xl font-['Calibri'] underline leading-[32px] text-[#00a859] mt-px">
-            Read more
-          </div>
+          
+
+      {/* display navigation menu on mobile */}
+      <div className={`lg:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
+        <div className="fixed top-0 left-0 w-full h-full 
+      flex items-center bg-gray-800 z-50 justify-between">
+          <ul className="mx-auto text-white text-xl text-center">
+            {links.map((link) => (
+              <li key={link.id} className="mb-4">
+                <Link href={link.url} onClick={toggleNavigation}>
+                  {link.text}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <button onClick={closeNavigation} className="text-red-500">
+                Close Navigation
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-    </div> */}
+          
+        {/* Display navigation menu on laptop */}
+      <div className=' 
+            justify-between items-center w-full
+            md:block md:w-auto lg:order-1'>
+        <ul className={`hidden lg:flex mx-auto 
+          text-white text-xl text-center 
+          ${isMenuOpen ? 'block' : 'hidden'}`}>
+          {links.map((link) => (
+            <li key={link.id} className="font-['Calibri'] font-bold leading-[28px] 
+            text-white mt-5 mr-16">
+              <Link href={link.url}>{link.text}</Link>
+            </li>
+            
+          ))}
+          <li className="font-['Calibri'] font-bold leading-[28px] 
+            text-white mt-5 ">
+            <button className='flex items-center' onClick={() => setDropdownOpen(!isDropdownOpen)}>GET INVOLVED 
+            <svg className={`w-2.5 h-2.5 ml-2.5 ${isDropdownOpen ? 'rotate-180' : ''}`}
+              // className={`w-2.5 h-2.5 ml-2.5 ${isDropdownOpen ? 'rotate-180' : ''}`}
 
-    
-  </div>
+            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+          </button >
+                    {/* <!-- Dropdown menu --> */}
+                    <div id="dropdownNavbar" 
+                    className={`z-10 absolute ${isDropdownOpen ? 'block' : 'hidden'} font-normal border
+                    divide-y divide-gray-100  shadow w-44 `}
+                    
+                    >
+                        <ul className="py-2 font-['Calibri'] font-bold leading-[28px]" aria-labelledby="dropdownLargeButton">
+                          <li>
+                            <a href="#" className="block px-4 py-2 hover:bg-gray-400 
+                            dark:hover:bg-gray-600 dark:hover:text-white">AS A SPONSOR</a>
+                          </li>
+                          <li>
+                            <a href="#" className="block px-4 py-2 hover:bg-gray-400 
+                            dark:hover:bg-gray-600 dark:hover:text-white">AS A MENTOR</a>
+                          </li>
+                          <li>
+                            <a href="#" className="block px-4 py-2 hover:bg-gray-400 
+                            dark:hover:bg-gray-600 dark:hover:text-white">AS VOLUNTEER</a>
+                          </li>
+                        </ul>
+                        
+                    </div>
+                </li>
+        </ul>
+      </div>
+      
+      
+
+  </nav>
 
     </>
 
