@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import NavBar from './NavBar';
 import Hero from './Hero';
+import NavBar2 from './NavBar2';
 
 interface HeaderProps {
   links: {id: string; text: string; url: string }[];
@@ -22,7 +23,8 @@ const Header: React.FC<HeaderProps> = ({ links }) => {
   <div className="bg-[url(https://file.rendit.io/n/itxqeF1WcZuVN9SynbtB.png)] 
     bg-cover bg-blend-normal bg-no-repeat flex flex-col ">
       <div className="bg-black/50 flex flex-col ">
-        <NavBar links={links} />
+        {/* <NavBar links={links} /> */}
+        <NavBar2 />
         <div className="flex flex-col items-end pb-[191px] pr-[20px]">
         <Hero /></div>
      
