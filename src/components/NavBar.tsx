@@ -156,7 +156,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 
 <nav className="bg-[linear-gradient(180deg,_rgba(227,_181,_34,_0.25)_0%,rgba(0,_0,_0,_0)_14%)] 
         bg-cover bg-50%_50% bg-blend-normal bg-repeat 
-        lg:flex  items-start pt-6 lg:px-5
+        lg:flex items-start pt-6 lg:px-5
         justify-between ">
 
 {/* <nav className="bg-gradient-to-b from-yellow-200 to-transparent bg-cover bg-center bg-no-repeat bg-50% 
