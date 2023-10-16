@@ -19,13 +19,12 @@ const Skeleton: React.FC = () => {
           </div>
           <div className="self-end flex flex-col gap-2 w-1/2 items-start">
             <div className="self-stretch relative flex flex-col justify-end mb-1 pt-16 items-start">
-              <div className="text-3xl font-['Calibri'] font-bold leading-[72px] text-[#14242c] absolute top-0 left-[422.5596008300781px] h-16 w-1/3">
+              <div className="text-3xl font-['Calibri'] font-bold leading-[72px] text-[#14242c] 
+              absolute top-0 right-0 h-16  
+              border-solid border-[#e3b522] border-b-4">
                 OUR MANDATE
               </div>
-              <div
-                id="Line"
-                className="border-solid border-[#e3b522] w-40 h-1 absolute top-10 left-[450px] border-t-4 border-b-0 border-x-0"
-              />
+              
               <div className="text-sm font-['Calibri'] leading-[32px] text-[#323232] relative w-full">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 Maecenas porttitor congue massa. Fusce posuere, magna sed
@@ -38,14 +37,13 @@ const Skeleton: React.FC = () => {
             <div className="self-end relative flex flex-col justify-end mr-px w-40 pt-16 pb-2">
               <div
                 id="OURMANDATE2"
-                className="text-3xl font-['Calibri'] font-bold leading-[72px] text-[#0a2640] absolute top-0 left-0 h-16 w-40"
+                className="text-3xl font-['Calibri'] font-bold leading-[72px] text-[#0a2640] 
+                absolute top-0 right-0 h-16 
+                border-solid border-[#e3b522] border-b-4"
               >
                 OBJECTIVES
               </div>
-              <div
-                id="Line1"
-                className="border-solid border-[#e3b522] relative ml-6 h-1 shrink-0 border-t-4 border-b-0 border-x-0"
-              />
+              
             </div>
             <div className="text-sm font-['Calibri'] leading-[32px] text-[#282828] w-full">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
@@ -59,7 +57,7 @@ const Skeleton: React.FC = () => {
         </div>
         <button
           id="Buttons"
-          className="bg-[#14bde3] flex flex-col justify-center mr-20 h-16 shrink-0 items-center rounded-[56px]"
+          className="bg-[#14bde3] flex flex-col justify-center mr-16 h-16 shrink-0 items-center rounded-[56px]"
         >
           <div
             id="StartNow"

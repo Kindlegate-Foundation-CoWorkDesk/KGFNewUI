@@ -219,7 +219,7 @@ const Footer: React.FC = () => {
       <div className="relative flex flex-col mr-5 pb-16 w-40 shrink-0 items-start">
         <div
           id="AboutUsContactUs1"
-          className="text-xl font-['Calibri'] leading-[16.5px] text-white absolute top-5 left-0 h-20 w-full"
+          className="text-xl font-['Calibri'] leading-[16.5px] text-white absolute top-10 left-0 h-20 w-full"
         >
           About Us
           <br />
@@ -235,7 +235,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className="relative flex flex-col mr-5 pb-16 w-40 shrink-0 items-start">
-        <div className="text-xl font-['Calibri'] leading-[16.5px] text-white absolute top-5 left-0 h-20 w-full">
+        <div className="text-xl font-['Calibri'] leading-[16.5px] text-white absolute top-10 left-0 h-20 w-full">
           Arts
           <br />
           <br />
@@ -248,32 +248,21 @@ const Footer: React.FC = () => {
           Programs
         </div>
       </div>
-      <div className="relative flex flex-col pb-16 w-40 shrink-0 items-start">
-        <div className="text-xl font-['Calibri'] leading-[16.5px] text-white absolute top-5 left-0 h-20 w-full">
+      <div className="relative flex flex-col mr-5 pb-16 w-40 shrink-0 items-start">
+        <div className="text-xl font-['Calibri'] leading-[16.5px] text-white absolute top-10 left-0 h-20 w-full">
           Blog
           <br />
-          <div className="w-40 h-32 relative flex flex-col items-start">
-            <div className="text-xl font-['Calibri'] leading-[16.5px] text-[#777777] contents absolute top-0 left-0 h-full w-full">
-              <br />
-            </div>
-            <div className="text-xl font-['Calibri'] leading-[16.5px] text-white contents relative w-full h-full">
-              Privacy Policy
-              <br />
-            </div>
-          </div>
-          <div className="w-40 h-32 relative flex flex-col items-start">
-            <div className="text-xl font-['Calibri'] leading-[16.5px] text-[#777777] contents absolute top-0 left-0 h-full w-full">
-              <br />
-            </div>
-            <div className="text-xl font-['Calibri'] leading-[16.5px] text-white contents relative w-full h-full">
-              News
-            </div>
-          </div>
+          <br />
+          Privacy Policy
+          <br />
+          <br />
+          News
         </div>
         <div className="text-xl font-['Abhaya_Libre'] font-bold leading-[32px] text-white relative w-full">
-          Resources
+          Resource
         </div>
       </div>
+      
     </div>
     <div
       id="Line3"
