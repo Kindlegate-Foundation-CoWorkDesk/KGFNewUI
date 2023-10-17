@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
- import { useGlobalContext } from "../../../../context/GlobalContext";
+ import { useGlobalContext } from "../../context/GlobalContext";
 
 const Hero: React.FC = () => {
 

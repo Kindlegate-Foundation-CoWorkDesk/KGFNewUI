@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import NavBar from './childs/NavBar';
-import Hero from './childs/Hero';
-import NavBar2 from '../NavBar2';
-import { HeroPosition } from '../../enums/enums';
+import NavBar from './NavBar';
+ import Hero from './Hero';
+import NavBarDynamic from './NavBarDynamic';
+import { HeroPosition } from '../enums/enums';
 
 interface HeaderProps {
   links: {id: number; text: string; url: string }[];
@@ -19,12 +19,18 @@ const Header: React.FC<HeaderProps> = ({ links
 
   return (
     <>
-      <div className="flex flex-col  ">
-        <div className=" 
-          bg-cover bg-blend-normal bg-no-repeat flex flex-col " 
-          style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="flex flex-col ">
+        <div 
+        className=" 
+          bg-cover bg-blend-normal bg-no-repeat flex flex-col" 
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+          
+          >
+            {/* <img src={`${backgroundImage}`}  className='w-full absolute z-30'/> */}
+
             <div className="bg-black/50 flex flex-col ">
               <NavBar links={links}  />
+              {/* <NavBarDynamic links={links}  /> */}
               
               <Hero />
               

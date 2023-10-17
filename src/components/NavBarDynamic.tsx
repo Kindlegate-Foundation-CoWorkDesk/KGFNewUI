@@ -5,14 +5,88 @@ import Hero from './Hero';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { useGlobalContext } from '../../../../context/GlobalContext';
+import { useGlobalContext } from '../../context/GlobalContext';
 import { useRouter } from 'next/router';
 
-interface NavBarProps {
-  links: {id: number; text: string; url: string }[];
+interface NavItem {
+  id: number;
+  text: string;
+  url: string;
+  submenu?: NavItem[];
 }
 
-const NavBar: React.FC<NavBarProps> = ({ links }) => {
+interface NavBarProps {
+  links: NavItem[];
+}
+
+const NavMenuItem: React.FC<{item: NavItem}> = ({item}) =>{
+  const [isSubmenuOpen, setSubmenuOpen] = useState(false);
+
+  const toggleSubmenu = () => {
+    setSubmenuOpen(!isSubmenuOpen);
+  };
+
+  const closeSubmenu = () => {
+    setSubmenuOpen(false);
+  };
+
+  return (
+
+    <li className="relative group ">
+      <Link href={item.url} className="text-white text-xl font-['Calibri'] font-bold leading-[28px]">
+        {/* <a className="text-white text-xl font-['Calibri'] font-bold leading-[28px]"> */}
+          {item.text}
+        {/* </a> */}
+      </Link>
+      {item.submenu && (
+        <button
+          onClick={toggleSubmenu}
+          className="ml-2.5 w-2.5 h-2.5 transform transition-transform"
+        >
+          <svg
+            className={`w-2.5 h-2.5 transform transition-transform ${
+              isSubmenuOpen ? 'rotate-180' : ''
+            }`}
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1 4 4 4-4"
+            />
+          </svg>
+        </button>
+      )}
+      {isSubmenuOpen && item.submenu && (
+        <ul className="flex justify-between items-center top-full left-0 hidden group-hover:block">
+          {item.submenu.map((subitem) => (
+            <li key={subitem.id}>
+              <Link href={subitem.url} className="block px-4 py-2 text-white hover:bg-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  onClick={closeSubmenu}>
+                {/* <a
+                  className="block px-4 py-2 text-white hover:bg-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+                  onClick={closeSubmenu}
+                > */}
+                  {subitem.text}
+                {/* </a> */}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </li>
+
+  );
+
+
+}
+
+const NavBarDynamic: React.FC<NavBarProps> = ({ links }) => {
 
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -80,11 +154,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
       flex items-center bg-gray-800 z-50 justify-between">
           <ul className="mx-auto text-white text-xl text-center">
             {links.map((link) => (
-              <li key={link.id} className="mb-4" >
-                <Link href={link.url} onClick={toggleNavigation}>
-                  {link.text}
-                </Link>
-              </li>
+              <NavMenuItem item={link} key={link.id} />
             ))}
             <li>
               <button onClick={closeNavigation} className="text-red-500">
@@ -96,51 +166,17 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
       </div>
           
         {/* Display navigation menu on laptop */}
-      <div className=' 
+      <div className='
             justify-between items-center w-full
             md:block md:w-auto lg:order-1'>
         <ul className={`hidden lg:flex mx-auto 
-          text-white text-xl text-center 
+          text-white text-xl text-center justify-between
           ${isMenuOpen ? 'block' : 'hidden'}`}>
           {links.map((link) => (
-            <li key={link.id} className="font-['Calibri'] font-bold leading-[28px] 
-            text-white mt-5 mr-16" >
-              <Link href={link.url}>{link.text}</Link>
-            </li>
+            <NavMenuItem item={link} key={link.id} />
             
           ))}
-          <li className="font-['Calibri'] font-bold leading-[28px] 
-            text-white mt-5 ">
-            <button className='flex items-center' onClick={() => setDropdownOpen(!isDropdownOpen)}>GET INVOLVED 
-            <svg className={`w-2.5 h-2.5 ml-2.5 ${isDropdownOpen ? 'rotate-180' : ''}`}
-
-            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-            </svg>
-          </button >
-                    {/* <!-- Dropdown menu --> */}
-                    <div id="dropdownNavbar" 
-                    className={`z-10 absolute ${isDropdownOpen ? 'block' : 'hidden'} font-normal border
-                    divide-y divide-gray-100  shadow w-44 `}
-                    
-                    >
-                        <ul className="py-2 font-['Calibri'] font-bold leading-[28px]" aria-labelledby="dropdownLargeButton">
-                          <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-400 
-                            dark:hover:bg-gray-600 dark:hover:text-white">AS A SPONSOR</a>
-                          </li>
-                          <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-400 
-                            dark:hover:bg-gray-600 dark:hover:text-white">AS A MENTOR</a>
-                          </li>
-                          <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-400 
-                            dark:hover:bg-gray-600 dark:hover:text-white">AS VOLUNTEER</a>
-                          </li>
-                        </ul>
-                        
-                    </div>
-                </li>
+          
         </ul>
       </div>
       
@@ -153,4 +189,4 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
   );
 };
 
-export default NavBar;
+export default NavBarDynamic;
