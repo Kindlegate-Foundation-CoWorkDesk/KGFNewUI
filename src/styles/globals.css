@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities; 
 
+
+/* Import Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
+@font-face {
+  font-family: 'Calibri';
+  src: url('../../public//fonts/Calibri\ Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 @layer base {
   html {
-    font-family: Calibri, system-ui, sans-serif;
+    font-family: 'Calibri', system-ui, sans-serif;
   }
   body {
     @apply bg-black
@@ -12,8 +22,7 @@
 }
 /* styles.css */
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 
 
 :root {
@@ -41,7 +50,7 @@
 /* Define font styles */
 
   body {
-    color: rgb(var(--foreground-rgb));
+    color: #f1f1f1;
     background-color: #f1f1f1;
     font-size: var(--font-size);
     font-weight: var(--font-weight);

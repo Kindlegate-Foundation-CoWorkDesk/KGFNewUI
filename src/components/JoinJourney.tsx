@@ -8,13 +8,13 @@ const JoinJourney: React.FC = () => {
         <>
         <div
       id="JOIN"
-      className="overflow-hidden bg-[#e3b522] flex flex-row justify-between pl-24 items-end"
+      className="overflow-hidden bg-[#e3b522] flex flex-row justify-between pl-24 items-end text-[#1d1d1d]"
     >
       <div className="flex flex-col mb-10 gap-8 w-[970px] h-64 items-start">
-        <div className="text-2xl font-['Calibri'] font-bold leading-[28px] text-[#1d1d1d] ml-1">
+        <div className="text-2xl font-bold leading-[28px] ml-1">
           THE JOURNEY TO BUILDING A BETTER WORLD STARTS HERE WITH YOU
         </div>
-        <div className="text-xl font-['Calibri'] leading-[22.5px] mb-6 w-full">
+        <div className="text-xl leading-[22.5px] mb-6 w-full">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
           porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
           purus lectus malesuada libero, sit amet commodo magna eros quis urna.
@@ -26,7 +26,7 @@ const JoinJourney: React.FC = () => {
         >
           <div
             id="StartNow3"
-            className="text-2xl font-['Calibri'] font-bold leading-[28px] text-[#1d1d1d] mx-12"
+            className="text-2xl  font-bold leading-[28px]  mx-12"
           >
             GET INVOLVED
           </div>

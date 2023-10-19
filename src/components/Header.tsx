@@ -7,12 +7,10 @@ import { HeroPosition } from '../enums/enums';
 
 interface HeaderProps {
   links: {id: number; text: string; url: string }[];
-  backgroundImage: string;
 
 }
 
 const Header: React.FC<HeaderProps> = ({ links
-  , backgroundImage
    }) => {
     
     
@@ -21,16 +19,15 @@ const Header: React.FC<HeaderProps> = ({ links
     <>
       <div className="flex flex-col ">
         <div 
-        className=" 
-          bg-cover bg-blend-normal bg-no-repeat flex flex-col" 
-          style={{ backgroundImage: `url(${backgroundImage})` }}
+        className="bg-cover bg-blend-normal bg-no-repeat flex flex-col" 
+          // style={{ backgroundImage: `url(${backgroundImage})` }}
           
           >
             {/* <img src={`${backgroundImage}`}  className='w-full absolute z-30'/> */}
 
             <div className="bg-black/50 flex flex-col ">
-              <NavBar links={links}  />
-              {/* <NavBarDynamic links={links}  /> */}
+              {/* <NavBar links={links}  /> */}
+             
               
               <Hero />
               

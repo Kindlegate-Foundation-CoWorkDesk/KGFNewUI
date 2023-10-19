@@ -7,8 +7,9 @@ import JoinJourney from "../JoinJourney";
 import {HeroPosition} from "../../enums/enums";
 import { useRouter } from 'next/router';
 import { useGlobalContext } from "../../../context/GlobalContext";
-import { navigationLinks } from "../../data/navigationData";
-
+import { navigationDynamicLinks } from "../../services/navigationDynamicData";
+import NavBarDynamic from "../NavBarDynamic";
+import { getNavigationHeroData } from "../../services/navigationHeroData";
 
 
 
@@ -30,57 +31,26 @@ const Layout: React.FC<LayoutProps> = ( {children, backgroundImage} ) => {
       
 
       useEffect(() => {
-        if (router.pathname === "/") {
-          handleNavigationChanged('KINDLEGATE FOUNDATION', `Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-          Maecenas porttitor congue massa. Fusce posuere, magna sed
-          pulvinar ultricies, purus lectus malesuada libero, sit amet
-          commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce
-          est.`);
-        } else if (router.pathname === "/OurMandate") {
-          handleNavigationChanged('OUR MANDATE', `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Maecenas porttitor congue massa. 
-          Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
-          sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `);
-        }
-        else if (router.pathname === "/Program"){
-          handleNavigationChanged('PROGRAMS',`Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Maecenas porttitor congue massa. 
-          Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
-          sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `);
-        } else if (router.pathname === "/OurTribe"){
-          handleNavigationChanged('OUR TRIBE',`Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Maecenas porttitor congue massa. 
-          Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
-          sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `);
-        } else if (router.pathname === "/NewsAndEvent"){
-          handleNavigationChanged('NEWS AND EVENT',`Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Maecenas porttitor congue massa. 
-          Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
-          sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `);
-        } else if (router.pathname === "/Blog"){
-          handleNavigationChanged('BLOG',`Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Maecenas porttitor congue massa. 
-          Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
-          sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `);
-        } else if (router.pathname === "/ContactUs"){
-          handleNavigationChanged('REACH US',`Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-          Maecenas porttitor congue massa. 
-          Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
-          sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `);
-        }
-    
-    
+          const currentPathname = router.pathname;
+          const {heroTitle, heroContent} = getNavigationHeroData(currentPathname);
+          handleNavigationChanged(heroTitle, heroContent)
       }, [router.pathname]);
       
     return (
       
       <>
-      <div className="container mx-auto ">
-        <Header links={navigationLinks} 
-        backgroundImage={backgroundImage} 
-        />
-      
-        {children}
+      <div className="container mx-auto w-full relative">
+        <div className="bg-transparent absolute top-0 w-full p-4">
+          <NavBarDynamic links={navigationDynamicLinks}   />
+        </div>
+      <div className="bg-black/50 flex flex-col bg-cover bg-blend-normal bg-no-repeat " 
+      style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <Header links={navigationDynamicLinks}/>
+      </div>
+      <div className="relative">
+      {children}
+      </div>
+        
 
         <JoinJourney />
       

@@ -5,7 +5,7 @@ import Skeleton from '../components/Skeleton';
 export default function OurMandate({ Component, pageProps }) {
   return (
     <>
-    <Skeleton />
+    {/* <Skeleton /> */}
 
     </>
     

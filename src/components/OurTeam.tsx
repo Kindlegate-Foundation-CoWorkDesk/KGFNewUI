@@ -74,8 +74,8 @@ const OurTeam: React.FC = () => {
 </div>  
         </div> */}
 
-<div className="overflow-hidden bg-[#f1f1f1] flex flex-col  gap-20 h-[767px] shrink-0 items-center px-24 py-8">
-      <div className="text-center text-4xl font-['Calibri'] font-bold leading-[72px] text-[#14242c] w-3/4">
+<div className="overflow-hidden bg-[#f1f1f1] text-[#14242c] flex flex-col  gap-20 h-[767px] shrink-0 items-center px-24 py-8">
+      <div className="text-center text-4xl  font-bold leading-[72px]  w-3/4">
         Featured Programs
       </div>
       <div className="self-stretch flex flex-col ml-3 gap-2">
@@ -94,40 +94,40 @@ const OurTeam: React.FC = () => {
             className=""
           />
         </div>
-        <div className="flex flex-row gap-64 items-start mb-8 mr-[323px]">
-          <div className="text-center text-2xl font-['Calibri'] font-bold leading-[28px] text-[#0a2640] mb-2 mr-12">
+        <div className="flex flex-row gap-64 items-start mb-8 ">
+          <div className="text-center text-2xl  font-bold leading-[28px] mb-2 mr-12">
             Leadership
           </div>
-          <div className="text-center text-2xl font-['Calibri'] font-bold leading-[28px] text-[#0a2640] mt-2">
+          <div className="text-center text-2xl  font-bold leading-[28px]  mt-2">
             Entrpreneurship
           </div>
-          <div className="text-center text-2xl font-['Calibri'] font-bold leading-[28px] text-[#0a2640] mt-1">
+          <div className="text-center text-2xl  font-bold leading-[28px]  mt-1">
             Arts
           </div>
         </div>
         <div className="flex flex-row mr-32 gap-10 items-start">
-          <div className="text-xl font-['Calibri'] leading-[22.5px] w-1/3 mb-1 mr-6">
+          <div className="text-xl  leading-[22.5px] w-1/3 mb-1 mr-6">
             Promoting thought based Leadership in the Community
           </div>
-          <div className="text-xl font-['Calibri'] leading-[22.5px] mt-1">
+          <div className="text-xl  leading-[22.5px] mt-1">
             Engage in entrepreneurial activities and learn
             <br />
             the necessary skills to make it
           </div>
-          <div className="text-justify text-xl font-['Calibri'] leading-[22.5px] mt-px">
+          <div className="text-justify text-xl  leading-[22.5px] mt-px">
             We engage the community in
             <br />
             recreational activities....
           </div>
         </div>
         <div className="flex flex-row justify-between mr-64 items-start">
-          <div className="text-2xl font-['Calibri'] underline leading-[32px] text-[#00a859] mb-1">
+          <div className="text-2xl underline leading-[32px] text-[#00A859]  mb-1">
             Read more
           </div>
-          <div className="text-2xl font-['Calibri'] underline leading-[32px] text-[#00a859] mt-1">
+          <div className="text-2xl underline leading-[32px] text-[#00A859] mt-1">
             Read more
           </div>
-          <div className="text-2xl font-['Calibri'] underline leading-[32px] text-[#00a859] mt-px">
+          <div className="text-2xl  underline leading-[32px] text-[#00A859] mt-px">
             Read more
           </div>
         </div>

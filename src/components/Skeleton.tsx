@@ -19,13 +19,13 @@ const Skeleton: React.FC = () => {
           </div>
           <div className="self-end flex flex-col gap-2 w-1/2 items-start">
             <div className="self-stretch relative flex flex-col justify-end mb-1 pt-16 items-start">
-              <div className="text-3xl font-['Calibri'] font-bold leading-[72px] text-[#14242c] 
+              <div className="text-3xl  font-bold leading-[72px] text-[#14242c] 
               absolute top-0 right-0 h-16  
               border-solid border-[#e3b522] border-b-4">
                 OUR MANDATE
               </div>
               
-              <div className="text-sm font-['Calibri'] leading-[32px] text-[#323232] relative w-full">
+              <div className="text-sm  leading-[32px] text-[#323232] relative w-full">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 Maecenas porttitor congue massa. Fusce posuere, magna sed
                 pulvinar ultricies, purus lectus malesuada libero, sit amet
@@ -37,7 +37,7 @@ const Skeleton: React.FC = () => {
             <div className="self-end relative flex flex-col justify-end mr-px w-40 pt-16 pb-2">
               <div
                 id="OURMANDATE2"
-                className="text-3xl font-['Calibri'] font-bold leading-[72px] text-[#0a2640] 
+                className="text-3xl  font-bold leading-[72px] text-[#0a2640] 
                 absolute top-0 right-0 h-16 
                 border-solid border-[#e3b522] border-b-4"
               >
@@ -45,7 +45,7 @@ const Skeleton: React.FC = () => {
               </div>
               
             </div>
-            <div className="text-sm font-['Calibri'] leading-[32px] text-[#282828] w-full">
+            <div className="text-sm  leading-[32px] text-[#282828] w-full">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
               porttitor congue massa. Fusce posuere, magna sed pulvinar
               ultricies, purus lectus malesuada libero, sit amet commodo magna
@@ -61,7 +61,7 @@ const Skeleton: React.FC = () => {
         >
           <div
             id="StartNow"
-            className="text-2xl font-['Calibri'] font-bold leading-[28px] text-[#1e1e1e] mx-12"
+            className="text-2xl  font-bold leading-[28px] text-[#1e1e1e] mx-12"
           >
             LEARN MORE
           </div>

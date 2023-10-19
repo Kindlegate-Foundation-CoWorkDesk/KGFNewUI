@@ -12,22 +12,28 @@ import { GlobalProvider } from '../../context/GlobalContext';
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [backgroundImage, setBackgroundImage] = useState('');
+
+  const backgroundImages = {
+    '/': '/close-up-community-concept-with-hands.svg',
+    '/OurMandate': '/cute-black-baby-home-with-parents.svg',
+
+    '/Program': '/study-group-african-people.svg',
+      '/Program/Arts': '/study-group-african-people.svg', // Map both routes to the same image
+      '/Program/Leadership':'/study-group-african-people.svg',
+      '/Program/Entrepreneurship':'/study-group-african-people.svg',
+      '/Program/FoodShelter':'/study-group-african-people.svg',
+      '/Program/SBGAwareness':'/study-group-african-people.svg',
+      
+    '/OurTribe': '/group-happy-african-volunteers-hugs-park-africa-volunteering-charity-people-ecology-concept.svg',
+    '/NewsAndEvent': '/man-reading-newspaper-street.svg',
+    '/Blog': '/group-afro-americans-working-together.svg',
+    '/ContactUs': '/happy-black-businesswoman-taking-phone-while-working-laptop-office.svg',
+  };
   
   useEffect(() => {
-    if (router.pathname === "/") {
-      setBackgroundImage("/close-up-community-concept-with-hands.svg");
-    } else if (router.pathname === "/OurMandate") {
-      setBackgroundImage("/cute-black-baby-home-with-parents.svg");
-    }else if (router.pathname === "/Program"){
-      setBackgroundImage("/study-group-african-people.svg");
-    } else if (router.pathname === "/OurTribe"){
-      setBackgroundImage("/group-happy-african-volunteers-hugs-park-africa-volunteering-charity-people-ecology-concept.svg");
-    } else if (router.pathname === "/NewsAndEvent"){
-      setBackgroundImage("/man-reading-newspaper-street.svg");
-    } else if (router.pathname === "/Blog"){
-      setBackgroundImage("/group-afro-americans-working-together.svg");
-    } else if (router.pathname === "/ContactUs"){
-      setBackgroundImage("/happy-black-businesswoman-taking-phone-while-working-laptop-office.svg");
+    const backgroundImageURL = backgroundImages[router.pathname];
+    if (backgroundImageURL) {
+      setBackgroundImage(backgroundImageURL);
     }
 
 

@@ -1,10 +1,10 @@
 // navigationData.ts
-export const navigationLinks = [
+export const navigationDynamicLinks = [
     { id: 1, text: 'HOME', url: '/', identifier: 'home' },
     { id: 2, text: 'OUR MANDATE', url: '/OurMandate', identifier: 'ourMandate'
         
     },
-    { id: 3, text: 'PROGRAM', url: '/Program', identifier: 'program',
+    { id: 3, text: 'PROGRAM', url: '', identifier: 'program',
         submenu: [
             { id: 31, text: 'ARTS', url: '/Program/Arts' },
             { id: 32, text: 'LEADERSHIP', url: '/Program/Leadership' },

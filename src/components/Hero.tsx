@@ -9,16 +9,16 @@ const Hero: React.FC = () => {
     return (
         <>
         {/* <div className={`flex flex-col ${position} py-[100px] px-[100px] `}> */}
-        <div className={`flex flex-col py-[100px] px-[100px] items-end `}>
+        <div className={`flex flex-col py-[200px] px-[100px] items-end `}>
           <div className="flex flex-col mr-8 gap-4 w-[469px] items-start">
             <div
               id="HowTheIndonesiaYouth"
-              className="text-6xl font-['Calibri'] font-bold  text-[#f1f1f1] inline-block"
+              className="text-6xl font-bold  text-[#f1f1f1] inline-block"
             >
               <span className=" tracking-widest"> {state.heroTitle} </span><br />
               <span className=" tracking-widest" >  </span>
             </div>
-            <div className="text-justify text-xl font-['Calibri'] leading-[22.5px] text-[#f1f1f1] mb-6 w-full">
+            <div className="text-justify text-xl leading-[22.5px] text-[#f1f1f1] mb-6 w-full">
               {state.heroContent}
             </div>
             <button
@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
             >
               <div
                 id="StartNow2"
-                className="text-2xl font-['Calibri'] font-bold leading-[28px]"
+                className="text-2xl font-bold leading-[28px]"
               >
                 KINDLEGATE CAUSE SHOP 
                 

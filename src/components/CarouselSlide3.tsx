@@ -112,7 +112,7 @@ const CarouselSlide3: React.FC = () => {
           id="Line"
           className="border-solid border-[#e3b522] w-3/5 h-1 absolute top-24 left-0 border-t-4 border-b-0 border-x-0"
         /> */}
-        <div className="text-4xl font-['Calibri'] font-bold leading-[49.5px] text-white relative">  
+        <div className="text-4xl font-bold leading-[49.5px]  relative">  
         
           OUR VALUE ADDING ROADMAP <br />
           <span className='border-solid border-[#e3b522] border-b-4'>
@@ -141,7 +141,7 @@ const CarouselSlide3: React.FC = () => {
               <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] 
               w-[672px] h-[354px] bg-[#4b4b4b] absolute top-[144px] left-[120px] 
               flex flex-col items-start pl-10 py-10 rounded">
-                <div className="text-xl font-['Calibri'] leading-[22.5px] text-white">
+                <div className="text-xl leading-[22.5px] ">
                   Healthy communities: <br />
                   <br />
                   We believe when our communities are healthy and Eco-friendly, people
@@ -168,7 +168,7 @@ const CarouselSlide3: React.FC = () => {
               <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] 
               w-[672px] h-[354px] bg-[#4b4b4b] absolute  top-[144px] right-[150px]
               flex flex-col justify-center items-end pl-10 py-10 rounded">
-                <div className="text-xl font-['Calibri'] leading-[22.5px] text-white  w-full">
+                <div className="text-xl  leading-[22.5px]  w-full">
                   Healthy communities : <br />
                   <br />
                   We believe when our communities are healthy and Eco-friendly, people
@@ -195,7 +195,7 @@ const CarouselSlide3: React.FC = () => {
               <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] 
               w-[672px] h-[354px] bg-[#4b4b4b] absolute top-[144px] left-[120px] 
               flex flex-col items-start pl-10 py-10 rounded">
-                <div className="text-xl font-['Calibri'] leading-[22.5px] text-white">
+                <div className="text-xl leading-[22.5px] ">
                   Healthy communities: <br />
                   <br />
                   We believe when our communities are healthy and Eco-friendly, people
@@ -222,7 +222,7 @@ const CarouselSlide3: React.FC = () => {
               <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] 
               w-[672px] h-[354px] bg-[#4b4b4b] absolute  top-[144px] right-[150px]
               flex flex-col justify-center items-end pl-10 py-10 rounded">
-                <div className="text-xl font-['Calibri'] leading-[22.5px] text-white  w-full">
+                <div className="text-xl leading-[22.5px] w-full">
                   Healthy communities : <br />
                   <br />
                   We believe when our communities are healthy and Eco-friendly, people
