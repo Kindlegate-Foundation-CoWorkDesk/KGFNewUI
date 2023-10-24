@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        basePath: '/src', // Set your custom base path here
-      },
+    
+  basePath: '/src', // Set your custom base path here
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  },
       
 }
 
 module.exports = nextConfig
+
+

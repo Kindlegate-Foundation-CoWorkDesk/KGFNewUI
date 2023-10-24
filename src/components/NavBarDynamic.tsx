@@ -104,7 +104,7 @@ const NavBarDynamic: React.FC<NavBarProps> = ({ links }) => {
   <div className="flex justify-between items-center z-50   
         bg-transparent ">       
         <a href="#" >
-          <Image src="../KGFlogo.svg" width={79} height={84} alt="KindleGateFoundation Logo" />
+          <Image src="/images/logo1.png" width={79} height={84} alt="KindleGateFoundation Logo" />
         </a>
         <div className=" flex lg:justify-between lg:order-2
           lg:gap-32 sm:gap-16 md:items-center ">            
