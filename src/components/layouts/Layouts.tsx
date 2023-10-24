@@ -45,8 +45,9 @@ const Layout: React.FC<LayoutProps> = ( {children, backgroundImage} ) => {
           {/* <NavBarDynamic links={navigationDynamicLinks}   /> */}
         </div>
       <div className="bg-black/50 flex flex-col bg-cover bg-blend-normal bg-no-repeat " 
-      style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <Header links={navigationDynamicLinks}/>
+      // style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+      {/* <Header links={navigationDynamicLinks}/> */}
       </div>
       <div className="relative">
       {children}
