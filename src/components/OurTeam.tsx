@@ -95,7 +95,8 @@ const OurTeam: React.FC = () => {
           />
         </div>
         <div className="flex flex-row gap-64 items-start mb-8 ">
-          <div className="text-center text-2xl  font-bold leading-[28px] mb-2 mr-12">
+          <div className="text-center text-2xl  font-bold 
+          leading-[28px] mb-2 mr-12">
             Leadership
           </div>
           <div className="text-center text-2xl  font-bold leading-[28px]  mt-2">

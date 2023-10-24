@@ -19,7 +19,8 @@ interface NavBarProps {
   links: NavItem[];
 }
 
-const NavMenuItem: React.FC<{item: NavItem}> = ({item}) =>{
+const NavMenuItem: React.FC<{item: NavItem; closeMenu: () => void}> 
+= ({item, closeMenu}) =>{
   const [isSubmenuOpen, setSubmenuOpen] = useState(false);
 
   const toggleSubmenu = () => {
@@ -30,19 +31,27 @@ const NavMenuItem: React.FC<{item: NavItem}> = ({item}) =>{
     setSubmenuOpen(false);
   };
 
+  const handleClick = () => {
+    if (!item.submenu) {
+      closeMenu(); // Close the mobile menu
+    }
+  };
+ 
   return (
 
-    <li className="group">
-      <Link href={item.url} className="text-xl font-bold leading-7 ">
-          {item.text}
-      </Link>
+     
+      <li className="group">
+        <Link href={item.url} className="text-xl font-bold leading-7 " 
+        onClick={handleClick}
+        >
+            {item.text}
+        </Link>
       {item.submenu && (
         
         <button onClick={toggleSubmenu} 
         className="w-2.5 h-2.5 transform transition-transform">
         <svg className={`w-2.5 h-2.5 ml-2.5 ${isSubmenuOpen ? 'rotate-180' : ''
         }`}
-
         aria-hidden="true" 
         xmlns="http://www.w3.org/2000/svg" 
         fill="none" viewBox="0 0 10 6">
@@ -54,12 +63,14 @@ const NavMenuItem: React.FC<{item: NavItem}> = ({item}) =>{
         </svg>
         </button >
       )}
+
       {isSubmenuOpen && item.submenu && (
         <ul className=" flex justify-between items-center top-full 
         lg:absolute hidden group-hover:block ">
           {item.submenu.map((subitem) => (
             <li key={subitem.id} >
-              <Link href={subitem.url} className="block hover:bg-gray-400 dark:hover:bg-gray-600 dark:hover:text-white"
+              <Link href={subitem.url} className="block hover:bg-gray-400 
+              dark:hover:bg-gray-600 dark:hover:text-white"
                   onClick={closeSubmenu}>                
                   {subitem.text}
               </Link>
@@ -67,6 +78,7 @@ const NavMenuItem: React.FC<{item: NavItem}> = ({item}) =>{
           ))}
         </ul>
       )}
+
     </li>
 
   );
@@ -125,12 +137,12 @@ const NavBarDynamic: React.FC<NavBarProps> = ({ links }) => {
             )}
         </div> 
 
-        {/* Display navigation menu on laptop */}
+        {/* Display navigation submenu on laptop */}
       <div className=' w-9/12 relative '>
         <ul className={`hidden lg:flex justify-between  
           ${isMenuOpen ? 'block' : 'hidden'}`}>
           {links.map((link) => (
-            <NavMenuItem item={link} key={link.id} />
+            <NavMenuItem item={link} key={link.id} closeMenu={closeNavigation}  />
             
           ))}
           
@@ -142,15 +154,17 @@ const NavBarDynamic: React.FC<NavBarProps> = ({ links }) => {
       <div className={`lg:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
              
         <div className="fixed top-0 left-0 w-full h-full 
-      flex flex-col items-center bg-gray-800 z-50 justify-between">
+      flex flex-col items-center bg-[#1086a0] z-50 justify-between">
          <button onClick={closeNavigation} 
-         className="text-red-500 absolute top-2 right-12">
-                X
+         className="absolute top-8 right-4">
+                <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
           </button>
-          <ul className="mx-auto text-xl text-center ">
+          <ul className="mx-auto text-xl text-center py-8">
             {links.map((link) => (
              
-              <NavMenuItem item={link} key={link.id} />
+              <NavMenuItem item={link} key={link.id} closeMenu={closeNavigation} />
             ))}
             
           </ul>

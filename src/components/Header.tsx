@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import NavBar from './NavBar';
  import Hero from './Hero';
+ import Hero2 from './Hero2';
 import NavBarDynamic from './NavBarDynamic';
 import { HeroPosition } from '../enums/enums';
 
@@ -29,7 +30,8 @@ const Header: React.FC<HeaderProps> = ({ links
               {/* <NavBar links={links}  /> */}
              
               
-              <Hero />
+              {/* <Hero /> */}
+              <Hero2 />
               
           
             </div>

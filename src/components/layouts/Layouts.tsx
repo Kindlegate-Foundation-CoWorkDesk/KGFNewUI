@@ -2,7 +2,6 @@ import React, { ReactNode, useEffect } from "react";
 import Header from "../Header";
 import Footer from "../Footer";
 import Skeleton from "../Skeleton";
-import OurTeam from "../OurTeam";
 import JoinJourney from "../JoinJourney";
 import {HeroPosition} from "../../enums/enums";
 import { useRouter } from 'next/router';
@@ -10,6 +9,8 @@ import { useGlobalContext } from "../../../context/GlobalContext";
 import { navigationDynamicLinks } from "../../services/navigationDynamicData";
 import NavBarDynamic from "../NavBarDynamic";
 import { getNavigationHeroData } from "../../services/navigationHeroData";
+import Footer2 from "../Footer2";
+import JoinJourney2 from "../JoinJourne2";
 
 
 
@@ -40,7 +41,7 @@ const Layout: React.FC<LayoutProps> = ( {children, backgroundImage} ) => {
       
       <>
       <div className="container mx-auto w-full relative">
-        <div className="bg-transparent absolute top-0 w-full p-4">
+        <div className="bg-gray-500 absolute top-0 w-full p-4">
           <NavBarDynamic links={navigationDynamicLinks}   />
         </div>
       <div className="bg-black/50 flex flex-col bg-cover bg-blend-normal bg-no-repeat " 
@@ -51,10 +52,11 @@ const Layout: React.FC<LayoutProps> = ( {children, backgroundImage} ) => {
       {children}
       </div>
         
+        {/* <JoinJourney /> */}
+        <JoinJourney2 />
 
-        <JoinJourney />
-      
-        <Footer />
+        {/* <Footer /> */}
+        <Footer2 />
       </div>
       </>
 

@@ -7,10 +7,15 @@ const Footer: React.FC = () => {
 
 <div
     id="FOOTER"
-    className="overflow-hidden bg-[#1086a0] flex flex-col gap-8 h-[496px] shrink-0 mx-0 py-4"
+    className="overflow-hidden bg-[#1086a0] flex flex-col 
+    gap-8 shrink-0 mx-0 py-4
+    "
   >
-    <div className="flex flex-row gap-20 items-center mb-5 ml-24 mr-64">
-      <div className="self-start flex flex-col gap-3 items-start">
+    <div className="flex md:flex-row lg: items-center mb-5 md:ml-24 md:mr-64
+      
+    ">
+      <div className="self-start flex flex-col gap-3 
+      items-start">
         <img
           src="https://file.rendit.io/n/G76gGj6jrViojYqDSjhE.png"
           id="Logo2"
@@ -25,7 +30,8 @@ const Footer: React.FC = () => {
       <div className="relative flex flex-col mr-5 pb-16 w-40 shrink-0 items-start">
         <div
           id="AboutUsContactUs1"
-          className="text-xl leading-[16.5px]  absolute top-10 left-0 h-20 w-full"
+          className="text-xl leading-[16.5px]  
+          absolute top-10 left-0 h-20 w-full"
         >
           About Us
           <br />
@@ -36,7 +42,8 @@ const Footer: React.FC = () => {
             <br />
           </div>
         </div>
-        <div className="text-xl font-bold leading-[32px]  relative w-full">
+        <div className="text-xl font-bold leading-[32px]  
+        relative w-full">
           Reach Us
         </div>
       </div>
