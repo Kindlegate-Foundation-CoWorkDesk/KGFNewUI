@@ -1,5 +1,6 @@
 import React from 'react';
 import Image  from 'next/image';
+import Link from 'next/link';
 const Footer2: React.FC = () => {
   return (
       <>
@@ -32,10 +33,10 @@ const Footer2: React.FC = () => {
             <ul className="text-xl leading-[16.5px]
             dark:text-gray-400 ">
                 <li className="mb-4">
-                    <a href="#" className="hover:underline">About Us</a>
+                    <Link href="#" className="hover:underline">About Us</Link>
                 </li>
                 <li className="mb-4">
-                    <a href="#" className="hover:underline">Contact Us</a>
+                    <Link href="#" className="hover:underline">Contact Us</Link>
                 </li>
                 
             </ul>
@@ -44,13 +45,13 @@ const Footer2: React.FC = () => {
             <h2 className="mb-6 text-xl font-bold dark:text-white">Programs</h2>
             <ul className="text-xl leading-[16.5px] dark:text-gray-400 ">
                 <li className="mb-4">
-                    <a href="/Program/Arts" className="hover:underline">Arts</a>
+                    <Link href="/Program/Arts" className="hover:underline">Arts</Link>
                 </li>
                 <li className="mb-4">
-                    <a href="/Program/SBGAwareness" className="hover:underline">SDGs</a>
+                    <Link href="/Program/SBGAwareness" className="hover:underline">SDGs</Link>
                 </li>
                 <li className="mb-4">
-                    <a href="/Program/Entrepreneurship" className="hover:underline">Entrepreneurship &amp; Conditions</a>
+                    <Link href="/Program/Entrepreneurship" className="hover:underline">Entrepreneurship &amp; Conditions</Link>
                 </li>
             </ul>
         </div>
@@ -58,13 +59,13 @@ const Footer2: React.FC = () => {
             <h2 className="mb-6 text-xl font-bold dark:text-white">Resource</h2>
             <ul className="text-xl leading-[16.5px] dark:text-gray-400">
                 <li className="mb-4">
-                    <a href="/Blog" className="hover:underline">Blog</a>
+                    <Link href="/Blog" className="hover:underline">Blog</Link>
                 </li>
                 <li className="mb-4">
-                    <a href="#" className="hover:underline">Privacy Policy</a>
+                    <Link href="#" className="hover:underline">Privacy Policy</Link>
                 </li>
                 <li className="mb-4">
-                    <a href="#" className="hover:underline">News</a>
+                    <Link href="#" className="hover:underline">News</Link>
                 </li>
                 
             </ul>
