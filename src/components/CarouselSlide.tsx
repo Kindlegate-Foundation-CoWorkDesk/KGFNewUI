@@ -144,7 +144,7 @@ const CarouselSlide: React.FC = () => {
                 </div>
               </div>      
               <Image alt='item1' width={532} height={572}
-                src="../medium-shot-women-posing-outdoors.svg"
+                src="/medium-shot-women-posing-outdoors.svg"
                 className="col-end-13 col-span-5 relative  "
               />
             </div>
