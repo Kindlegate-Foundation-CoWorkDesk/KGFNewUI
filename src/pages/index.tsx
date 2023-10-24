@@ -10,8 +10,8 @@ export default function Home({ Component, pageProps }) {
   return (
     <>
     <Skeleton2 />    
-    <CarouselSlide  />
-    {/* <CarouselSlide4 /> */}
+    {/* <CarouselSlide  /> */}
+    <CarouselSlide3 />
     {/* <OurTeam /> */}
     <OurTeam2 />
   </>
