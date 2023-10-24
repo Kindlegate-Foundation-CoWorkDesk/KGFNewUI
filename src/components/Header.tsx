@@ -27,7 +27,6 @@ const Header: React.FC<HeaderProps> = ({ links
             {/* <img src={`${backgroundImage}`}  className='w-full absolute z-30'/> */}
 
             <div className="bg-black/50 flex flex-col ">
-              {/* <NavBar links={links}  /> */}
              
               
               {/* <Hero /> */}

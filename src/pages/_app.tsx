@@ -25,7 +25,8 @@ export default function MyApp({ Component, pageProps }) {
       '/Program/SBGAwareness':'/study-group-african-people.svg',
       
     '/OurTribe': '/group-happy-african-volunteers-hugs-park-africa-volunteering-charity-people-ecology-concept.svg',
-    '/NewsAndEvent': '/man-reading-newspaper-street.svg',
+
+      '/NewsAndEvent': '/man-reading-newspaper-street.svg',
     '/Blog': '/group-afro-americans-working-together.svg',
     '/ContactUs': '/happy-black-businesswoman-taking-phone-while-working-laptop-office.svg',
   };
