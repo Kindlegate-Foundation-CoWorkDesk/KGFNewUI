@@ -50,7 +50,7 @@ const Layout: React.FC<LayoutProps> = ( {children, backgroundImage} ) => {
       {/* <Header links={navigationDynamicLinks}/> */}
       </div>
       <div className="relative">
-      {children}
+      {/* {children} */}
       </div>
         
         {/* <JoinJourney /> */}
