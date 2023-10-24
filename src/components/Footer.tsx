@@ -1,4 +1,5 @@
 import React from 'react';
+import Image  from 'next/image';
 
 const Footer: React.FC = () => {
   return (
@@ -16,7 +17,7 @@ const Footer: React.FC = () => {
     ">
       <div className="self-start flex flex-col gap-3 
       items-start">
-        <img
+        <Image alt='logo' width={136} height={144}
           src="https://file.rendit.io/n/G76gGj6jrViojYqDSjhE.png"
           id="Logo2"
           className=""
@@ -82,22 +83,22 @@ const Footer: React.FC = () => {
       className="border-solid border-white mr-1 h-px shrink-0 border-t border-b-0 border-x-0"
     />
     <div className="self-center flex flex-row justify-between gap-8 items-start">
-      <img
+      <Image alt='facebook' width={40} height={40}
         src="https://file.rendit.io/n/1ROVdiAIm7XuC4Dm4szm.svg"
         id="Icbaselinefacebook"
         className="w-10 shrink-0"
       />
-      <img
+      <Image alt='instagram' width={40} height={40}
         src="https://file.rendit.io/n/k6aOe0hbvjiqZYwLq06i.svg"
         id="Mdiinstagram"
         className="w-12 shrink-0"
       />
-      <img
+      <Image alt='twitter' width={40} height={40}
         src="https://file.rendit.io/n/4sYkvmtwIFFWlNwPtjqF.svg"
         id="Mditwitter"
         className="w-10 shrink-0"
       />
-      <img
+      <Image alt='youtube' width={40} height={40}
         src="https://file.rendit.io/n/XYOHQE6kAdbBmcyvFUXZ.svg"
         id="Biyoutube"
         className="mt-px w-10 shrink-0"

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
  
 interface JoinJourney {
     link: { text: string; url: string }[];
@@ -35,8 +36,8 @@ const JoinJourney: React.FC = () => {
           </div>
         </button>
       </div>
-      <img
-        src="../asset61.png"
+      <Image alt="Asset"  width={326} height={326}
+        src="/asset61.png"
         id="Asset2"
         className="flex-inline  mt-8 object-contain h-1/4 w-1/4 lg:w-auto lg:h-[326px]"
       />

@@ -2,6 +2,7 @@ import { Carousel } from 'flowbite';
 import { useEffect } from 'react';
 import React from 'react';
 import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite";
+import Image from 'next/image';
 
 
 
@@ -90,7 +91,7 @@ const CarouselSlide3: React.FC = () => {
     <div className="overflow-hidden bg-[#f1f1f1] flex flex-col pt-7 gap-10 w-full items-center"
   >
     <div className=" self-stretch relative flex flex-col justify-end pt-12 gap-6 items-start mt-[-23px] ml-24 mr-[-127px]">
-      <img
+      <Image alt='carouselPattern' width={346} height={343}
         src="../carousel-pattern.svg" 
         id="Asset"
         className="w-[346px] h-[343px] absolute top-0 left-[1080px]"
@@ -101,11 +102,7 @@ const CarouselSlide3: React.FC = () => {
       className="   bg-carousel-primary flex flex-col pb-10 gap-10 w-[1400px] items-center rounded-[20px]"
     >
     <div className=" self-stretch relative flex flex-col justify-end pt-12 gap-6 items-start mt-[-23px] ml-24 mr-[-127px]">
-      {/* <img
-        src="../carousel-pattern.svg" 
-        id="Asset"
-        className="w-[346px] h-[343px] absolute top-0 left-[1080px]"
-      /> */}
+      
       {/* line */}
       <div className="relative flex flex-col ml-8 w-[536px] items-start">
         {/* <div
@@ -133,7 +130,7 @@ const CarouselSlide3: React.FC = () => {
             className="hidden duration-700 ease-in-out
             flex justify-center items-center"
             data-carousel-item="active">
-              <img
+              <Image alt='item1'  width={532} height={572}
                 src="../medium-shot-women-posing-outdoors.svg"
                 className="w-[532px] h-[572px] bg-black/15 absolute top-0 
                 right-[150px]"
@@ -161,7 +158,7 @@ const CarouselSlide3: React.FC = () => {
             relative flex justify-center items-center
             "
             data-carousel-item>
-              <img
+              <Image alt='item2'  width={532} height={572}
                 src="../confident-businessman-working-his-laptop.svg"
                 className="w-[532px] h-[572px] bg-black/15 absolute left-[120px]  top-0"
               />
@@ -187,7 +184,7 @@ const CarouselSlide3: React.FC = () => {
             className="hidden duration-700 ease-in-out
             flex justify-center items-center"
             data-carousel-item="active">
-              <img
+              <Image alt='item3'  width={532} height={572}
                 src="../woman-spending-time-with-her-black-baby-boy.svg"
                 className="w-[532px] h-[572px] bg-black/15 absolute top-0 
                 right-[150px]"
@@ -215,7 +212,7 @@ const CarouselSlide3: React.FC = () => {
             relative flex justify-center items-center
             "
             data-carousel-item>
-              <img
+              <Image alt='item4'  width={532} height={572}
                 src="../young-students-attending-university-class.svg"
                 className="w-[532px] h-[572px] bg-black/15 absolute left-[120px]  top-0"
               />

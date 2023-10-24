@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image  from 'next/image';
 const Footer2: React.FC = () => {
   return (
       <>
@@ -12,7 +12,7 @@ const Footer2: React.FC = () => {
       <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4 items-center justify-center">
         <div>
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase 
-            dark:text-white"><img
+            dark:text-white"><Image alt='logo' width={136} height={144}
             src="../KGFFooterLogo.svg"
             id="Logo2"
             className=""
@@ -79,22 +79,22 @@ const Footer2: React.FC = () => {
     <div className="px-4 py-6 dark:bg-gray-700 flex items-center justify-center ">
         
         <div className="flex mt-4 space-x-9 justify-center md:mt-0">
-          <img
+          <Image alt='facebook' width={40} height={40}
             src="https://file.rendit.io/n/1ROVdiAIm7XuC4Dm4szm.svg"
             id="Icbaselinefacebook"
             className="w-10 shrink-0"
           />
-          <img
+          <Image alt='instagram' width={40} height={40}
             src="https://file.rendit.io/n/k6aOe0hbvjiqZYwLq06i.svg"
             id="Mdiinstagram"
             className="w-12 shrink-0"
           />
-          <img
+          <Image alt='twitter' width={40} height={40}
             src="https://file.rendit.io/n/4sYkvmtwIFFWlNwPtjqF.svg"
             id="Mditwitter"
             className="w-10 shrink-0"
           />
-          <img
+          <Image alt='youtube' width={40} height={40}
             src="https://file.rendit.io/n/XYOHQE6kAdbBmcyvFUXZ.svg"
             id="Biyoutube"
             className="mt-px w-10 shrink-0"

@@ -2,7 +2,7 @@ import { Carousel } from 'flowbite';
 import { useEffect } from 'react';
 import React from 'react';
 import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite";
-
+import Image from 'next/image';
 
 
 const CarouselSlide: React.FC = () => {
@@ -90,8 +90,8 @@ const CarouselSlide: React.FC = () => {
     <div className="overflow-hidden bg-[#f1f1f1] flex flex-col pt-12 pr-12 w-full relative"
   >
     <div className="absolute flex flex-col justify-end pt-12 pr-12 items-end top-[-50px] right-[-50px] z-50">
-      <img
-        src="../carousel-pattern.svg" 
+      <Image alt='carouselPattern'
+        src="../carousel-pattern.svg" width={346} height={343}
         id="Asset"
         className="object-contain w-2/3 lg:w-full"
       />
@@ -143,7 +143,7 @@ const CarouselSlide: React.FC = () => {
                   living environment with access to disease prevention medicine.
                 </div>
               </div>      
-              <img
+              <Image alt='item1' width={532} height={572}
                 src="../medium-shot-women-posing-outdoors.svg"
                 className="col-end-13 col-span-5 relative  "
               />
@@ -154,7 +154,7 @@ const CarouselSlide: React.FC = () => {
              grid grid-cols-12 justify-between items-center
             "
             data-carousel-item>
-              <img
+              <Image alt='item2'  width={532} height={572}
                 src="../confident-businessman-working-his-laptop.svg"
                 className="bg-black/15 relative col-start-1 col-span-5 px-2 "
               />
@@ -198,7 +198,7 @@ const CarouselSlide: React.FC = () => {
                   living environment with access to disease prevention medicine.
                 </div>
               </div>      
-              <img
+              <Image alt='item3'  width={532} height={572}
                 src="../woman-spending-time-with-her-black-baby-boy.svg"
                 className="col-end-13 col-span-5 relative  "
               />
@@ -213,7 +213,7 @@ const CarouselSlide: React.FC = () => {
             grid grid-cols-12 justify-between items-center
             "
             data-carousel-item>
-              <img
+              <Image alt='item4'  width={532} height={572}
                 src="../young-students-attending-university-class.svg"
                 className="bg-black/15 relative col-start-1 col-span-5 px-2"
               />
