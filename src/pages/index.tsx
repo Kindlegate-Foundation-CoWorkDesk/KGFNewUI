@@ -9,11 +9,10 @@ import CarouselSlide from '../components/CarouselSlide';
 export default function Home({ Component, pageProps }) {
   return (
     <>
-    <Skeleton2 />    
-    <CarouselSlide  />
-    {/* <CarouselSlide3 /> */}
+    {/* <Skeleton2 />     */}
+    {/* <CarouselSlide  /> */}
     {/* <OurTeam /> */}
-    <OurTeam2 />
+    {/* <OurTeam2 /> */}
   </>
   );
 }

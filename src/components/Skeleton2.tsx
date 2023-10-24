@@ -11,8 +11,8 @@ const Skeleton2: React.FC = () => {
       >
         <div className="self-stretch flex flex-row lg:mr-16 items-start">
           <div className="lg:inline-flex hidden lg:relative lg:flex flex-col w-1/2 items-start">
-            <img
-              src="https://file.rendit.io/n/0lGHvBiG9HMl2LJ47hrh.png"
+            <Image
+              src="https://file.rendit.io/n/0lGHvBiG9HMl2LJ47hrh.png" 
               id="Asset"
               className="relative"
             />
