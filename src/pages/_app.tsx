@@ -44,11 +44,11 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <GlobalProvider>
-    <Layout backgroundImage={backgroundImage}>
+    {/* <Layout backgroundImage={backgroundImage}> */}
       
       <Component {...pageProps} />
       <Script src='../node_modules/flowbite/dist/flowbite.min.js' />
-    </Layout>
+    {/* </Layout> */}
     </GlobalProvider>
   );
 }
