@@ -42,7 +42,7 @@ const Layout: React.FC<LayoutProps> = ( {children, backgroundImage} ) => {
       <>
       <div className="container mx-auto w-full relative">
         <div className="bg-gray-500 absolute top-0 w-full p-4">
-          <NavBarDynamic links={navigationDynamicLinks}   />
+          {/* <NavBarDynamic links={navigationDynamicLinks}   /> */}
         </div>
       <div className="bg-black/50 flex flex-col bg-cover bg-blend-normal bg-no-repeat " 
       style={{ backgroundImage: `url(${backgroundImage})` }}>
