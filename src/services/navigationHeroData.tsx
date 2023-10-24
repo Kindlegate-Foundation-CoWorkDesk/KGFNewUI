@@ -1,6 +1,7 @@
 export interface NavigationHeroData {
     heroTitle: string;
     heroContent: string;
+    backgroundImageUrl: string;
 }
 
 export function getNavigationHeroData(route: string): NavigationHeroData {
@@ -13,6 +14,7 @@ export function getNavigationHeroData(route: string): NavigationHeroData {
                 pulvinar ultricies, purus lectus malesuada libero, sit amet
                 commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce
                 est.`,
+                backgroundImageUrl: '/close-up-community-concept-with-hands.svg',
             };
         case '/OurMandate':
             return {
@@ -21,6 +23,8 @@ export function getNavigationHeroData(route: string): NavigationHeroData {
                 Maecenas porttitor congue massa. 
                 Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
                 sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `,
+                backgroundImageUrl: '/cute-black-baby-home-with-parents.svg',
+
             };
         
         case '/Program':
@@ -35,6 +39,7 @@ export function getNavigationHeroData(route: string): NavigationHeroData {
                 Maecenas porttitor congue massa. 
                 Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
                 sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `,
+                backgroundImageUrl: '/study-group-african-people.svg'
             };
 
         case '/OurTribe':
@@ -44,6 +49,8 @@ export function getNavigationHeroData(route: string): NavigationHeroData {
                 Maecenas porttitor congue massa. 
                 Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
                 sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `,
+                backgroundImageUrl: '/group-happy-african-volunteers-hugs-park-africa-volunteering-charity-people-ecology-concept.svg',
+
             };
 
         
@@ -54,6 +61,8 @@ export function getNavigationHeroData(route: string): NavigationHeroData {
                 Maecenas porttitor congue massa. 
                 Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
                 sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `,
+                backgroundImageUrl: '/man-reading-newspaper-street.svg',
+
             };
 
         case '/Blog':
@@ -72,6 +81,8 @@ export function getNavigationHeroData(route: string): NavigationHeroData {
                     Maecenas porttitor congue massa. 
                     Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
                     sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `,
+                    backgroundImageUrl: '/happy-black-businesswoman-taking-phone-while-working-laptop-office.svg',
+
                 };
 
         default: 
@@ -82,6 +93,7 @@ export function getNavigationHeroData(route: string): NavigationHeroData {
             pulvinar ultricies, purus lectus malesuada libero, sit amet
             commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce
             est.`,
+            backgroundImageUrl: '/close-up-community-concept-with-hands.svg',
         };
     }
 }

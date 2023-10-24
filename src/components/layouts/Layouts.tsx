@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import { useGlobalContext } from "../../../context/GlobalContext";
 import { navigationDynamicLinks } from "../../services/navigationDynamicData";
 import NavBarDynamic from "../NavBarDynamic";
+import NavBar2 from "../NavBar2";
 import { getNavigationHeroData } from "../../services/navigationHeroData";
 import Footer2 from "../Footer2";
 import JoinJourney2 from "../JoinJourne2";
@@ -16,41 +17,44 @@ import JoinJourney2 from "../JoinJourne2";
 
 type LayoutProps = {
     children: ReactNode; // This allows any JSX elements as children
-    backgroundImage: string;
   };
-const Layout: React.FC<LayoutProps> = ( {children, backgroundImage} ) => {
+const Layout: React.FC<LayoutProps> = ( {children} ) => {
 
     
       const { dispatch } = useGlobalContext();
 
       const router = useRouter();
+
+      const {state} = useGlobalContext();
     
-      const handleNavigationChanged = (heroTitle:string, heroContent: string) => {
-        dispatch({type: 'NAVIGATION_ITEM_CHANGED', payload: {heroTitle, heroContent}});
+      const handleNavigationChanged = (heroTitle:string, heroContent: string, backgroundImageUrl: string) => {
+        dispatch({type: 'NAVIGATION_ITEM_CHANGED', payload: {heroTitle, heroContent, backgroundImageUrl}});
       }
         // Create event handlers for each navigation link
       
 
       useEffect(() => {
           const currentPathname = router.pathname;
-          const {heroTitle, heroContent} = getNavigationHeroData(currentPathname);
-          handleNavigationChanged(heroTitle, heroContent)
+          const {heroTitle, heroContent, backgroundImageUrl} = getNavigationHeroData(currentPathname);
+          handleNavigationChanged(heroTitle, heroContent, backgroundImageUrl)
       }, [router.pathname]);
       
     return (
       
       <>
       <div className="container mx-auto w-full relative">
-        <div className="bg-gray-500 absolute top-0 w-full p-4">
-          {/* <NavBarDynamic links={navigationDynamicLinks}   /> */}
+        <div className=" absolute top-0 w-full p-4">
+          <NavBarDynamic links={navigationDynamicLinks}   />
+         
         </div>
+        {/* <NavBar2 /> */}
       <div className="bg-black/50 flex flex-col bg-cover bg-blend-normal bg-no-repeat " 
-      // style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{ backgroundImage: `url(${state.backgroundImageUrl})` }}
       >
-      {/* <Header links={navigationDynamicLinks}/> */}
+      <Header links={navigationDynamicLinks}/>
       </div>
       <div className="relative">
-      {/* {children} */}
+      {children}
       </div>
         
         {/* <JoinJourney /> */}

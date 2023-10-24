@@ -41,7 +41,7 @@ const NavMenuItem: React.FC<{item: NavItem; closeMenu: () => void}>
 
      
       <li className="group">
-        <Link href={item.url} className="text-xl font-bold leading-7 " 
+        <Link href={item.url} className="text-xl font-bold leading-7 px-6" 
         onClick={handleClick}
         >
             {item.text}
@@ -101,13 +101,14 @@ const NavBarDynamic: React.FC<NavBarProps> = ({ links }) => {
   
   return (
     <>
-  <div className="flex justify-between items-center z-50   
+  <div className="flex justify-between items-center z-50  
+  lg:fixed lg:top-0 
         bg-transparent ">       
         <a href="#" >
           <Image src="/KGFlogo.svg" width={79} height={84} alt="KindleGateFoundation Logo" />
         </a>
         <div className=" flex lg:justify-between lg:order-2
-          lg:gap-32 sm:gap-16 md:items-center ">            
+           md:items-center ">            
             <button
               id="Button1"
               className="border-solid border-white bg-[#00a859] 
@@ -118,7 +119,7 @@ const NavBarDynamic: React.FC<NavBarProps> = ({ links }) => {
                         
             {!isMenuOpen && (
               <button  onClick={toggleNavigation} type="button" 
-              className="sminline-flex items-center p-2 w-10 h-10 
+              className="sm:inline-flex items-center p-2 w-10 h-10 
               justify-center absolute right-2
               text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 
               focus:outline-none focus:ring-2 focus:ring-gray-200 
@@ -138,8 +139,8 @@ const NavBarDynamic: React.FC<NavBarProps> = ({ links }) => {
         </div> 
 
         {/* Display navigation submenu on laptop */}
-      <div className=' w-9/12 relative '>
-        <ul className={`hidden lg:flex justify-between  
+      <div className=' w-full relative'>
+        <ul className={`hidden lg:flex lg:justify-between  items-center
           ${isMenuOpen ? 'block' : 'hidden'}`}>
           {links.map((link) => (
             <NavMenuItem item={link} key={link.id} closeMenu={closeNavigation}  />

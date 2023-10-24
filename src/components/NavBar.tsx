@@ -128,12 +128,12 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
                     >
                         <ul className="py-2 font-['Calibri'] font-bold leading-[28px]" aria-labelledby="dropdownLargeButton">
                           <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-400 
-                            dark:hover:bg-gray-600 dark:hover:text-white">AS A SPONSOR</a>
+                            <Link href="#" className="block px-4 py-2 hover:bg-gray-400 
+                            dark:hover:bg-gray-600 dark:hover:text-white">AS A SPONSOR</Link>
                           </li>
                           <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-400 
-                            dark:hover:bg-gray-600 dark:hover:text-white">AS A MENTOR</a>
+                            <Link href="#" className="block px-4 py-2 hover:bg-gray-400 
+                            dark:hover:bg-gray-600 dark:hover:text-white">AS A MENTOR</Link>
                           </li>
                           <li>
                             <a href="#" className="block px-4 py-2 hover:bg-gray-400 

@@ -5,6 +5,7 @@ type GlobalState = {
     counter: number;
     heroTitle: string;
     heroContent: string;
+    backgroundImageUrl: string;
 // Your initial state properties here
 };
 
@@ -12,13 +13,14 @@ type GlobalAction =
 | {type: 'SET_SOMETHING'; payload: any}
 | {type: 'RESET_SOMETHING'}
 | {type: 'INCREMENT_COUNTER'}
-| {type: 'NAVIGATION_ITEM_CHANGED'; payload: {heroTitle: string; heroContent: string}};
+| {type: 'NAVIGATION_ITEM_CHANGED'; payload: {heroTitle: string; heroContent: string; backgroundImageUrl: string}};
 
 const initialState: GlobalState = {
 // Your initial state properties here
     counter: 10,
     heroTitle: '',
-    heroContent: ''
+    heroContent: '',
+    backgroundImageUrl:'',
 };
 
 const GlobalContext = createContext<{
@@ -37,7 +39,7 @@ const reducer = (state: GlobalState, action: GlobalAction): GlobalState => {
         case 'INCREMENT_COUNTER':
             return {...state, counter: state.counter + 1};
         case 'NAVIGATION_ITEM_CHANGED':
-            return {...state, heroTitle: action.payload.heroTitle, heroContent: action.payload.heroContent };
+            return {...state, heroTitle: action.payload.heroTitle, heroContent: action.payload.heroContent, backgroundImageUrl: action.payload.backgroundImageUrl };
         default:
             return state;
     }
