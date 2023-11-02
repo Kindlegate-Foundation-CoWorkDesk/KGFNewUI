@@ -1,7 +1,7 @@
 import React from 'react';
 import Image  from 'next/image';
 import Link from 'next/link';
-const Footer2: React.FC = () => {
+const Footer: React.FC = () => {
   return (
       <>
       
@@ -112,4 +112,4 @@ const Footer2: React.FC = () => {
   );
 };
 
-export default Footer2;
+export default Footer;

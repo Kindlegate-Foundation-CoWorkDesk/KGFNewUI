@@ -1,6 +1,5 @@
 import React, { ReactNode, useEffect } from "react";
 import Header from "../Header";
-import Footer from "../Footer";
 import Skeleton from "../Skeleton";
 import JoinJourney from "../JoinJourney";
 import {HeroPosition} from "../../enums/enums";
@@ -10,8 +9,7 @@ import { navigationDynamicLinks } from "../../services/navigationDynamicData";
 import NavBarDynamic from "../NavBarDynamic";
 import NavBar2 from "../NavBar2";
 import { getNavigationHeroData } from "../../services/navigationHeroData";
-import Footer2 from "../Footer2";
-import JoinJourney2 from "../JoinJourne2";
+import Footer from "../Footer";
 
 
 
@@ -58,10 +56,10 @@ const Layout: React.FC<LayoutProps> = ( {children} ) => {
       </div>
         
         {/* <JoinJourney /> */}
-        <JoinJourney2 />
+        <JoinJourney />
 
         {/* <Footer /> */}
-        <Footer2 />
+        <Footer />
       </div>
       </>
 

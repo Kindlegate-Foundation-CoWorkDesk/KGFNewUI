@@ -72,6 +72,7 @@ export function getNavigationHeroData(route: string): NavigationHeroData {
                 Maecenas porttitor congue massa. 
                 Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, 
                 sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. `,
+                backgroundImageUrl: '/group-afro-americans-working-together.svg',
             };
 
             case '/ContactUs':

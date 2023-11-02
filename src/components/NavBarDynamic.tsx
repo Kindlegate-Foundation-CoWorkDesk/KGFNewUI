@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import Hero from './Hero';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { useGlobalContext } from '../../context/GlobalContext';
 import { useRouter } from 'next/router';
@@ -41,7 +41,7 @@ const NavMenuItem: React.FC<{item: NavItem; closeMenu: () => void}>
 
      
       <li className="group">
-        <Link href={item.url} className="text-xl font-bold leading-7 px-6" 
+        <Link href={item.url} className="text-xl font-bold leading-7 px-2" 
         onClick={handleClick}
         >
             {item.text}
@@ -50,7 +50,7 @@ const NavMenuItem: React.FC<{item: NavItem; closeMenu: () => void}>
         
         <button onClick={toggleSubmenu} 
         className="w-2.5 h-2.5 transform transition-transform">
-        <svg className={`w-2.5 h-2.5 ml-2.5 ${isSubmenuOpen ? 'rotate-180' : ''
+        <svg className={`w-2.5 h-2.5 ${isSubmenuOpen ? 'rotate-180' : ''
         }`}
         aria-hidden="true" 
         xmlns="http://www.w3.org/2000/svg" 
@@ -65,13 +65,13 @@ const NavMenuItem: React.FC<{item: NavItem; closeMenu: () => void}>
       )}
 
       {isSubmenuOpen && item.submenu && (
-        <ul className=" flex justify-between items-center top-full 
+        <ul className=" flex justify-between items-center top-full bg-[#14bde3] px-4
         lg:absolute hidden group-hover:block ">
           {item.submenu.map((subitem) => (
             <li key={subitem.id} >
               <Link href={subitem.url} className="block hover:bg-gray-400 
               dark:hover:bg-gray-600 dark:hover:text-white"
-                  onClick={closeSubmenu}>                
+                  onClick={closeSubmenu}>         
                   {subitem.text}
               </Link>
             </li>
@@ -90,6 +90,26 @@ const NavBarDynamic: React.FC<NavBarProps> = ({ links }) => {
 
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Toggle the appearance of the fixed navigation bar when scrolling
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add a scroll event listener when the component mounts
+    window.addEventListener('scroll', handleScroll);
+
+    // Remove the scroll event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleNavigation = () => {
     setMenuOpen(!isMenuOpen);
@@ -99,11 +119,18 @@ const NavBarDynamic: React.FC<NavBarProps> = ({ links }) => {
     setMenuOpen(false);
   };
   
+  
+  // Define a CSS class for the fixed navigation
+  const fixedNavClass = isScrolled ? 'fixed top-0 left-0 mx-auto bg-[#14bde3] w-full px-4 z-50' : 'bg-transparent';
+
+
   return (
     <>
-  <div className="flex justify-between items-center z-50  
+  {/* <div className="flex justify-between items-center z-50  
   lg:fixed lg:top-0 
-        bg-transparent ">       
+        bg-transparent ">    */}
+        <div className={`flex justify-between items-center z-50   ${fixedNavClass}`}>
+    
         <a href="#" >
           <Image src="/KGFlogo.svg" width={79} height={84} alt="KindleGateFoundation Logo" />
         </a>
@@ -130,16 +157,12 @@ const NavBarDynamic: React.FC<NavBarProps> = ({ links }) => {
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                   d="M1 1h15M1 7h15M1 13h15"/>
               </svg>
-             
-
               </button>
-
-              
             )}
         </div> 
 
         {/* Display navigation submenu on laptop */}
-      <div className=' w-full relative'>
+      <div className=' w-full relative px-4'>
         <ul className={`hidden lg:flex lg:justify-between  items-center
           ${isMenuOpen ? 'block' : 'hidden'}`}>
           {links.map((link) => (

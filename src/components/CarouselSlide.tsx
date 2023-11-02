@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import React from 'react';
 import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite";
 import Image from 'next/image';
-
+import carouselPattern from '../../public/carousel-pattern.png';
 
 const CarouselSlide: React.FC = () => {
     useEffect(() => {
@@ -89,11 +89,20 @@ const CarouselSlide: React.FC = () => {
 
     <div className="overflow-hidden bg-[#f1f1f1] flex flex-col pt-12 pr-12 w-full relative"
   >
-    <div className="absolute flex flex-col justify-end pt-12 pr-12 items-end top-[-50px] right-[-50px] z-50">
+    <div className="flex flex-col absolute justify-end pt-12 pr-12 items-end top-[-50px] right-[-50px] z-30 
+    width-[346px] height-[343px]">
       <Image alt='carouselPattern'
-        src="../carousel-pattern.svg" width={346} height={343}
+        // src='/carousel-pattern.png'       
+        src={carouselPattern}  
+                //sizes="60vw"
+        //sizes="(max-width: 500px) 30vw, 100vw"
+        // Make the image display full width
+        style={{
+          width: '70%',
+          height: 'auto',
+        }}
+        
         id="Asset"
-        className="object-contain w-2/3 lg:w-full"
       />
       </div>
     
@@ -120,17 +129,17 @@ const CarouselSlide: React.FC = () => {
       data-carousel="static">
           {/* <!-- Carousel wrapper --> */}
           <div className='
-          relative flex flex-col h-[572px] w-[1400]'>
+          relative flex flex-col  h-[572px] w-[1400]'>
             {/* Item 1 */}
             <div id="carousel-item-1" 
             className="hidden duration-700 ease-in-out 
-            grid grid-cols-12   justify-between items-center"
+            grid grid-cols-12 justify-between items-center   "
             data-carousel-item="active">
               
-              <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] 
-              bg-[#4b4b4b] col-start-1 col-span-9 absolute  z-30 mr-[100px] lg:mr-48
-               rounded">
-                <div className="lg:text-xl lg:leading-[22.5px]  ">
+              <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] h-[354px] 
+              bg-[#4b4b4b] col-start-1 col-span-9 absolute  z-30 mr-[100px] lg:mr-48 flex justify-between items-center px-4
+               rounded ">
+                <div className="lg:text-xl lg:leading-[22.5px] ">
                   Healthy communities: <br />
                   <br />
                   We believe when our communities are healthy and Eco-friendly, people
@@ -143,8 +152,8 @@ const CarouselSlide: React.FC = () => {
                   living environment with access to disease prevention medicine.
                 </div>
               </div>      
-              <Image alt='item1' width={532} height={572}
-                src="/medium-shot-women-posing-outdoors.svg"
+              <Image alt='item1' 
+                src="/medium-shot-women-posing-outdoors.svg" fill
                 className="col-end-13 col-span-5 relative  "
               />
             </div>
@@ -153,13 +162,13 @@ const CarouselSlide: React.FC = () => {
             className="hidden  duration-700 ease-in-out
              grid grid-cols-12 justify-between items-center
             "
-            data-carousel-item>
-              <Image alt='item2'  width={532} height={572}
-                src="../confident-businessman-working-his-laptop.svg"
+            data-carousel-item="active">
+              <Image alt='item2'  
+                src="../confident-businessman-working-his-laptop.svg" fill
                 className="bg-black/15 relative col-start-1 col-span-5 px-2 "
               />
-              <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] 
-              bg-[#4b4b4b] absolute col-end-13 col-span-9 ml-[100px] lg:ml-48
+              <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] h-[354px] 
+              bg-[#4b4b4b] absolute col-end-13 col-span-9 ml-[100px] lg:ml-32 flex justify-between items-center px-4
               rounded">
                 <div className="lg:text-xl  lg:leading-[22.5px] ">
                   Healthy communities : <br />
@@ -182,8 +191,8 @@ const CarouselSlide: React.FC = () => {
             grid grid-cols-12   justify-between items-center"
             data-carousel-item="active">
               
-              <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] 
-              bg-[#4b4b4b] col-start-1 col-span-9 absolute  z-30 mr-[100px] lg:mr-48
+              <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] h-[354px] 
+              bg-[#4b4b4b] col-start-1 col-span-9 absolute  z-30 mr-[100px] lg:mr-48 flex justify-between items-center px-4
                rounded">
                 <div className="lg:text-xl lg:leading-[22.5px]  ">
                   Healthy communities: <br />
@@ -198,8 +207,8 @@ const CarouselSlide: React.FC = () => {
                   living environment with access to disease prevention medicine.
                 </div>
               </div>      
-              <Image alt='item3'  width={532} height={572}
-                src="../woman-spending-time-with-her-black-baby-boy.svg"
+              <Image alt='item3'  
+                src="../woman-spending-time-with-her-black-baby-boy.svg" fill
                 className="col-end-13 col-span-5 relative  "
               />
             </div>
@@ -213,12 +222,12 @@ const CarouselSlide: React.FC = () => {
             grid grid-cols-12 justify-between items-center
             "
             data-carousel-item>
-              <Image alt='item4'  width={532} height={572}
-                src="../young-students-attending-university-class.svg"
+              <Image alt='item4' 
+                src="../young-students-attending-university-class.svg" fill
                 className="bg-black/15 relative col-start-1 col-span-5 px-2"
               />
-              <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] 
-              bg-[#4b4b4b] absolute col-end-13 col-span-9 ml-[100px] lg:ml-48
+              <div className="shadow-[0px_4px_4px_0px_rgba(0,_0,_0,_0.25)] h-[354px] 
+              bg-[#4b4b4b] absolute col-end-13 col-span-9 ml-[100px] lg:ml-32 flex justify-between items-center px-4
               rounded">
                 <div className="lg:text-xl  lg:leading-[22.5px] ">
                   Healthy communities : <br />

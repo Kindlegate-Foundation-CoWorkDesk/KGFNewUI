@@ -1,26 +1,30 @@
 import React from 'react';
+import Image from 'next/image';
+import SkeletonPattern from '../../public/Asset71.svg';
 
 const Skeleton: React.FC = () => {
   return (
     <>
     <div
         id="BODY"
-        className=" h-[684px] overflow-hidden 
+        className=" overflow-hidden 
         bg-[#f1f1f1] relative top-0 left-0 
-        flex flex-col justify-center gap-8 items-end pt-10 pb-12 rounded-[40px]"
+        flex flex-col justify-center items-end pt-10 pb-6 lg:pr-15 pr-12 rounded-[40px]"
       >
-        <div className="self-stretch flex flex-row mr-16 items-start">
-          <div className="relative flex flex-col mb-px w-1/2 items-start">
-            <img
-              src="https://file.rendit.io/n/0lGHvBiG9HMl2LJ47hrh.png"
+        <div className="self-stretch flex flex-row items-center">
+          <div className="relative flex flex-col w-1/3 items-start z-30">
+            <Image  alt='Asset71'
+              src={SkeletonPattern} 
+              
               id="Asset"
-              className="relative"
             />
           </div>
-          <div className="self-end flex flex-col gap-2 w-1/2 items-start">
-            <div className="self-stretch relative flex flex-col justify-end mb-1 pt-16 items-start">
+
+          <div className="flex flex-col gap-2 w-2/3 items-start relative">
+            <div className="self-stretch  flex flex-col justify-end mb-1 pt-16 items-start">
               <div className="text-3xl  font-bold leading-[72px] text-[#14242c] 
-              absolute top-0 right-0 h-16  
+              absolute top-0 right-0 
+              h-16  
               border-solid border-[#e3b522] border-b-4">
                 OUR MANDATE
               </div>
@@ -34,7 +38,7 @@ const Skeleton: React.FC = () => {
                 senectus et netus et malesuada fames ac turpis egestas. <br />
               </div>
             </div>
-            <div className="self-end relative flex flex-col justify-end mr-px w-40 pt-16 pb-2">
+            <div className="self-end relative flex flex-col justify-end pt-16 pb-2">
               <div
                 id="OURMANDATE2"
                 className="text-3xl  font-bold leading-[72px] text-[#0a2640] 
@@ -44,7 +48,7 @@ const Skeleton: React.FC = () => {
                 OBJECTIVES
               </div>
               
-            </div>
+            
             <div className="text-sm  leading-[32px] text-[#282828] w-full">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
               porttitor congue massa. Fusce posuere, magna sed pulvinar
@@ -52,16 +56,16 @@ const Skeleton: React.FC = () => {
               eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a
               tellus. Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. <br />
-            </div>
+            </div></div>
           </div>
         </div>
         <button
           id="Buttons"
-          className="bg-[#14bde3] flex flex-col justify-center mr-16 h-16 shrink-0 items-center rounded-[56px]"
+          className="bg-[#14bde3] flex flex-col justify-center lg:mr-16 h-16 shrink-0 items-center rounded-[56px]"
         >
           <div
             id="StartNow"
-            className="text-2xl  font-bold leading-[28px] text-[#1e1e1e] mx-12"
+            className="lg:text-2xl  font-bold leading-[28px]  mx-6 lg:mx-12"
           >
             LEARN MORE
           </div>

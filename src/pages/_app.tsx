@@ -10,11 +10,7 @@ import { HeroPosition } from '../enums/enums';
 import { GlobalProvider } from '../../context/GlobalContext';
 
 export default function MyApp({ Component, pageProps }) {
-
-  
-  
-  
-  
+  const router = useRouter();
 
   return (
     <GlobalProvider>
